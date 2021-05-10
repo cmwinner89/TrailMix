@@ -1,9 +1,11 @@
-class Api::UsersController < ApplicationRecord 
-
-
+class Api::SessionsController < ApplicationController
+    skip_before_action :verify_authenticity_token
+    
     def create 
-        @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
-
+        # debugger
+        # params.require(:user).permit(:email, :password)
+        @user = User.find_by_credentials(params[:email], params[:password])
+        # debugger
         if @user.nil?
             render json: ['Invalid username or password'], status: 401
         else
@@ -12,8 +14,14 @@ class Api::UsersController < ApplicationRecord
         end
     end
 
-    def logout!
+    def destroy
         logout!
         render json: {message: 'Logout was successful'}
     end
+
+    # private 
+
+    # def session_params
+    #     params.require(:user).permit(:email, :password)
+    # end
 end

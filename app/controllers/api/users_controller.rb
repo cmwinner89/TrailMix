@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
 
     def new
-        @user = selectediser
+        @user = selected_user
     end
 
     def create
@@ -52,6 +52,6 @@ class Api::UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:users).permit(:fname, :lname, :email)
+        params.require(:user).permit(:fname, :lname, :email, :password)
     end
 end
