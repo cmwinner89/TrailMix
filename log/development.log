@@ -715,3 +715,593 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 232ms (Views: 9.6ms | ActiveRecord: 3.7ms)
 
 
+Started POST "/api/session" for ::1 at 2021-05-10 17:24:17 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:7:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 17:25:10 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 17:26:05 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 17:26:11 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 17:28:10 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 17:30:23 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 17:31:12 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 17:33:38 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (22.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cwinn@win.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 251ms (Views: 9.1ms | ActiveRecord: 31.5ms)
+
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:36:03 -0400
+
+SyntaxError - syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 401
+...                            ^~~:
+  app/controllers/api/users_controller.rb:14:in `'
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:38:00 -0400
+
+SyntaxError - syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 401
+...                            ^~~:
+  app/controllers/api/users_controller.rb:14:in `'
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:40:39 -0400
+
+SyntaxError - syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~:
+  app/controllers/api/users_controller.rb:14:in `'
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:46:42 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:47:45 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:56:40 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:56:54 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:57:11 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:57:58 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for ::1 at 2021-05-10 17:59:02 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:58:in `user_params'
+  app/controllers/api/users_controller.rb:11:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 19:25:05 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"test1@test.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:58:in `user_params'
+  app/controllers/api/users_controller.rb:11:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 19:25:26 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"email"=>"test1@test.com", "password"=>"[FILTERED]", "fname"=>"kyle", "lname"=>"kyle"}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:58:in `user_params'
+  app/controllers/api/users_controller.rb:11:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 19:26:39 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 35635ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:59:in `user_params'
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 19:30:48 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 8858ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:59:in `user_params'
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 19:34:25 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/" for ::1 at 2021-05-10 20:01:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1483ms (Views: 1480.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-05-10 20:01:50 -0400
+Started POST "/api/session" for ::1 at 2021-05-10 20:01:50 -0400
+Started DELETE "/api/session" for ::1 at 2021-05-10 20:01:50 -0400
+Processing by Api::UsersController#create as JSON
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:17:in `logout!'
+  app/controllers/api/sessions_controller.rb:18:in `destroy'
+
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+Completed 401 Unauthorized in 30ms (Views: 0.2ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/" for ::1 at 2021-05-10 20:06:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 285ms (Views: 282.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-05-10 20:06:41 -0400
+Started POST "/api/session" for ::1 at 2021-05-10 20:06:41 -0400
+Started DELETE "/api/session" for ::1 at 2021-05-10 20:06:41 -0400
+Processing by Api::UsersController#create as JSON
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#destroy as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:17:in `logout!'
+  app/controllers/api/sessions_controller.rb:18:in `destroy'
+
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 15ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+Completed 401 Unauthorized in 40ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2021-05-10 20:06:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 313ms (Views: 310.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-10 20:26:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-05-10 20:53:52 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test2@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:62:in `user_params'
+  app/controllers/api/users_controller.rb:13:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 20:56:09 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test2@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:62:in `user_params'
+  app/controllers/api/users_controller.rb:13:in `create'
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/session" for ::1 at 2021-05-10 21:03:43 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cwinn@win.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.5ms)
+Completed 200 OK in 227ms (Views: 9.3ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:06:44 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:61:in `user_params'
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:07:16 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/collin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:61:in `user_params'
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:07:36 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 172208ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:62:in `user_params'
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:10:38 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 2362ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:62:in `user_params'
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:20:00 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@test.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:62:in `user_params'
+  app/controllers/api/users_controller.rb:12:in `create'
+
+Started POST "/api/session" for ::1 at 2021-05-10 21:31:16 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cwinn@win.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 39679ms (Views: 14.0ms | ActiveRecord: 16.2ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-05-10 21:32:06 -0400
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"user"=>{"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Whf1-XSqE3JKxLxdZMTOXw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "cwinn@win.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "v0aTDobzC9RODANntDxOFw"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "v0aTDobzC9RODANntDxOFw"], ["updated_at", "2021-05-11 01:32:06.493863"], ["id", 2]]
+  ↳ app/models/user.rb:35
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:35
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 13.5ms)
+
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:32:45 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"fname"=>"kyle", "lname"=>"kyle", "user"=>{"email"=>"cwinn@win.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cwinn@win.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4TFArdon1wKyYpl9jWAsPw"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:14
+Completed 422 Unprocessable Entity in 325ms (ActiveRecord: 1.5ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Fname can't be blank, Lname can't be blank, Email has already been taken:
+  app/controllers/api/users_controller.rb:14:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:33:00 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"fname"=>"kyle", "lname"=>"kyle", "email"=>"cwinn@win.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cwinn@win.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-aIGczmyIHkUqzQk7J6leg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:14
+Completed 422 Unprocessable Entity in 233ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email has already been taken:
+  app/controllers/api/users_controller.rb:14:in `create'
+
+Started GET "/" for ::1 at 2021-05-10 21:34:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1710ms (Views: 1707.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-05-10 21:34:41 -0400
+Processing by Api::SessionsController#create as JSON
+Completed 500 Internal Server Error in 46207ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:35:27 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@win.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[36mUser Exists (26.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@win.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8ns-4yK3CxSeDEPKY7IyvA"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "fname", "lname", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2021-05-11 01:35:28.192462"], ["updated_at", "2021-05-11 01:35:28.192462"], ["fname", "kyle"], ["lname", "kyle"], ["email", "test1@win.com"], ["password_digest", "$2a$12$SQXz9MGSUGeISHFU11ACWOz8Oe.gOPQlvJUVaeBNvzeSDvMNQk/3C"], ["session_token", "8ns-4yK3CxSeDEPKY7IyvA"]]
+  ↳ app/controllers/api/users_controller.rb:14
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 257ms (Views: 10.0ms | ActiveRecord: 35.3ms)
+
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:48:12 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@win.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for ::1 at 2021-05-10 21:49:11 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/collin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"fname"=>"kyle", "lname"=>"kyle", "email"=>"test1@win.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/" for ::1 at 2021-05-10 22:28:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1656ms (Views: 1653.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-10 22:28:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 326ms (Views: 322.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-10 22:30:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2021-05-11 09:46:45 -0400
+Started GET "/" for ::1 at 2021-05-11 09:46:45 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/collin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  ↳ /home/collin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Started GET "/" for ::1 at 2021-05-11 09:46:48 -0400
+Completed 200 OK in 3609ms (Views: 3598.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+

@@ -1,30 +1,36 @@
 class Api::UsersController < ApplicationController
 
+    skip_before_action :verify_authenticity_token
+
     def new
-        @user = selected_user
+        @user = User.new
+        render :new
     end
 
     def create
+        # debugger
         @user = User.new(user_params)
-
+        # debugger
         if @user.save!
             login!(@user)
             render :show
         else
-            render json: @user.errors.full_messages, status 401
+            render json: @user.errors.full_messages, status: 422
         end
     end
 
     def show
-        @user = selected_user
+        @user = User.find(params[:id])
+        render :show
     end
 
     def edit
-        @user = selected_user
+        @user = User.find(params[:id])
+        render :edit                         
     end
 
     def update
-        @user = selected_user
+        @user = User.find(params[:id])
         if @user && @user.update_attributes(user_params)
             render :show
         elsif !@user
@@ -35,7 +41,7 @@ class Api::UsersController < ApplicationController
     end
 
     def delete
-        @user = selected_user
+        @user = User.find(params[:id])
 
         if @user 
             @user.destroy
@@ -47,11 +53,12 @@ class Api::UsersController < ApplicationController
 
     private 
 
-    def selected_user
-        User.find(params[:id])
-    end
+    # def selected_user
+    #     User.find(params[:id])
+    # end
 
     def user_params
+        # debugger
         params.require(:user).permit(:fname, :lname, :email, :password)
     end
 end
