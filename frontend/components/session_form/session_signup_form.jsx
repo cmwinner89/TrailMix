@@ -26,6 +26,8 @@ class SessionSignupForm extends React.Component {
         
         this.props.action(this.state);
         this.setState({
+            fname: '',
+            lname: '',
             email: '',
             password: ''
         });
@@ -71,7 +73,7 @@ class SessionSignupForm extends React.Component {
                     <br />
                     <label>Email: 
                         <input 
-                            type="text"
+                            type="email"
                             value={email}
                             onChange={this.update('email')}
                         />

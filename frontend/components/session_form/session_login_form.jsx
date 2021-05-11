@@ -24,6 +24,11 @@ class SessionLoginForm extends React.Component {
         e.preventDefault();
         
         this.props.action(this.state);
+
+        this.setState({
+            email: '',
+            password: ''
+        });
     }
 
     demo(e) {
@@ -48,7 +53,7 @@ class SessionLoginForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Email: 
                         <input 
-                            type="text"
+                            type="email"
                             value={email}
                             onChange={this.update('email')}
                         />
