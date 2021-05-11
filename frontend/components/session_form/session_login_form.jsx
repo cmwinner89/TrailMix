@@ -1,18 +1,17 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class SessionLoginForm extends React.Component {
 
     constructor(props){
         super(props);
-
+        // debugger
         this.state = {
-            fname: '',
-            lname: '',
             email: '',
             password: ''
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demo = this.demo.bind(this);
     }
 
     update(field) {
@@ -27,33 +26,26 @@ class SessionForm extends React.Component {
         this.props.action(this.state);
     }
 
-    render (){
-        const { fname, lname, email, password } = this.state;
-        const { formType } = this.props;
+    demo(e) {
+        e.preventDefault();
 
+        const demoUser = {
+            email: "demo@trailmix.com",
+            password: 'password'
+        };
+
+        this.props.action(demoUser);
+    }
+
+    render (){
+        const { email, password } = this.state;
+        const { formType, navLink } = this.props;
+        // debugger
         return (
             <div>
-                <h3>{formType}</h3>
-
+                <h2>{formType}</h2>
+                {/* <h1>YO FROM LOGIN FORM</h1> */}
                 <form onSubmit={this.handleSubmit}>
-                    <label>First Name: 
-                        <input 
-                            type="text"
-                            value={fname}
-                            onChange={this.update('fname')}
-                        />
-                    </label>
-                    <br />
-                    <br />
-                    <label>Last Name: 
-                        <input 
-                            type="text"
-                            value={lname}
-                            onChange={this.update('lname')}
-                        />
-                    </label>
-                    <br />
-                    <br />
                     <label>Email: 
                         <input 
                             type="text"
@@ -65,18 +57,23 @@ class SessionForm extends React.Component {
                     <br />
                     <label>Password: 
                         <input 
-                            type="text"
+                            type="password"
                             value={password}
                             onChange={this.update('password')}
                         />
                     </label>
                     <br />
+                    <br />
                     <button>{formType}</button>
                 </form>
+                <p>{navLink}</p>
+                <br />
+                <br />
+                <button onClick={this.demo}>Demo User</button>
             </div>
         )
     }
 }
 
 
-export default SessionForm;
+export default SessionLoginForm;
