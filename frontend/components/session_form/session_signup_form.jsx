@@ -101,6 +101,7 @@ class SessionSignupForm extends React.Component {
                         type="text"
                         value={fname}
                         onChange={this.update('fname')}
+                        required
                     />
                 </label>
                 <br />
@@ -110,6 +111,7 @@ class SessionSignupForm extends React.Component {
                         type="text"
                         value={lname}
                         onChange={this.update('lname')}
+                        required
                     />
                 </label>
                 <br />
@@ -131,6 +133,7 @@ class SessionSignupForm extends React.Component {
                             type="email"
                             value={email}
                             onChange={this.update('email')}
+                            required
                         />
                     </label>
                     <br />
@@ -140,6 +143,7 @@ class SessionSignupForm extends React.Component {
                             type="password"
                             value={password}
                             onChange={this.update('password')}
+                            required
                         />
                     </label>
                     {/* {fnameError} */}

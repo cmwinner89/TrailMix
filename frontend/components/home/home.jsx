@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Home = ({ currentUser, logout }) => {
+const Home = (state) => {
 
     // if (currentUser) {
     //     return (
