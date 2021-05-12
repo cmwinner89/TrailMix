@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+
+.big-head {
+    width: 100%;
+    height: 65px;
+    // background-color: grey;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.big-head-button {
+    height: 30px;
+    width: 100px;
+    background-color: #E6692A;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 7px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 19px;
+}
+
+.big-head-button:last-child {
+    margin-right: 5px;
+}
+
+.big-head-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.333%;
+    font-family: 'Saira Condensed', sans-serif;
+   
+}
+.big-head-section > p {
+    font-size: 46px;
+}
+
+.big-head-section:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    
+}
+
+.big-head-logo {
+    height: 53px;
+    width: 53px;
+    margin-right: 7px;
+}
