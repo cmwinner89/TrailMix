@@ -51,7 +51,7 @@ class SessionLoginForm extends React.Component {
                 <h2>{formType}</h2>
                 {/* <h1>YO FROM LOGIN FORM</h1> */}
                 <form onSubmit={this.handleSubmit}>
-                    <label>Email: 
+                    <label className="text-field">Email: 
                         <input 
                             type="email"
                             value={email}
@@ -60,21 +60,22 @@ class SessionLoginForm extends React.Component {
                     </label>
                     <br />
                     <br />
-                    <label>Password: 
+                    <label className="text-field">Password: 
                         <input 
                             type="password"
                             value={password}
                             onChange={this.update('password')}
                         />
                     </label>
+                    <br /> 
                     <br />
-                    <br />
-                    <button>{formType}</button>
+                    <button className="big-head-button">{formType}</button>
                 </form>
+                <br />
+                <button className="big-head-button" onClick={this.demo}>Demo User</button>
+                
                 <p>{navLink}</p>
-                <br />
-                <br />
-                <button onClick={this.demo}>Demo User</button>
+            
             </div>
         )
     }

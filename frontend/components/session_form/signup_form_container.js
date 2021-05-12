@@ -11,7 +11,8 @@ const mSTP = ({ errors }) => ({
 });
 
 const mDTP = (dispatch) => ({
-    action: user => dispatch(signUp(user))
+    action: user => dispatch(signUp(user)),
+    login: user => dispatch(login(user))
 });
 
 export default connect(mSTP, mDTP)(SessionSignupForm);

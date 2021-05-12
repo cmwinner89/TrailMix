@@ -2,25 +2,18 @@ import React from 'react';
 import HomeContainer from '../home/home_container'
 import { Link } from 'react-router-dom';
 
-const Header = (props) => {
-    const { currentUser } = props;
-    const isUser = (currentUser) => {
-        if (currentUser) {
-            return (
-                <div className='big-head-section'>
-                    <h2>Welcome, {currentUser.fname}</h2>
-                    <button className="big-head-button" onClick={logout}>Logout</button>
-                </div>
-            )
-        } else {
-            return (
-                <div className='big-head-section'>
-                    <Link className='big-head-button' to="/signup">Sign up</Link>
-                    <Link className='big-head-button' to='/login'>Login</Link>
-                </div>
-            )
-        }
-    }
+const Header = ({currentUser, logout}) => {
+
+   
+    const isUser = (currentUser ? (
+        <div className='big-head-section'>
+            <h2>Welcome, {currentUser.fname}</h2>
+            <button className="big-head-button" onClick={logout}>Logout</button>
+        </div>
+    ) : <div className='big-head-section'>
+        <Link className='big-head-button' to="/signup">Sign up</Link>
+        <Link className='big-head-button' to='/login'>Login</Link>
+    </div>)
 
 
     return (
@@ -34,10 +27,7 @@ const Header = (props) => {
                     <p>TrailMix</p>
                 {/* </Link> */}
             </div>
-            <div className='big-head-section'>
-                <Link className='big-head-button' to="/signup">Sign up</Link>
-                <Link className='big-head-button' to='/login'>Login</Link>
-            </div>
+           {isUser}
         </header>
     )
 }

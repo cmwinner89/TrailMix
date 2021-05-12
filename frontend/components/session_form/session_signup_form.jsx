@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class SessionSignupForm extends React.Component {
 
@@ -11,8 +12,9 @@ class SessionSignupForm extends React.Component {
             email: '',
             password: ''
         }
-
+        // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     update(field) {
@@ -35,8 +37,10 @@ class SessionSignupForm extends React.Component {
 
     demo(e) {
         e.preventDefault();
-
+        // debugger
         const demoUser = {
+            fname: "Demo",
+            lname: "User",
             email: "demo@trailmix.com",
             password: 'password'
         };
@@ -62,25 +66,37 @@ class SessionSignupForm extends React.Component {
             }
         }
 
-        const passwordError = (errors) => {
-            if (errors) {
-                errors.map((error, idx) => {
-                    if (error.includes("Password")) {
-                        return (
-                            <ul>
-                                <li key={idx}>{error}</li>
-                            </ul>
-                        )
-                    }
-                })
-            } else {
-                return "";
-            }
-        };
+        // const passwordError = (errors) => {
+        //     if (errors) {
+        //         errors.map((error, idx) => {
+        //             if (error.includes("Password")) {
+        //                 return (
+        //                     <ul>
+        //                         <li key={idx}>{error}</li>
+        //                     </ul>
+        //                 )
+        //             }
+        //         })
+        //     } else {
+        //         return "";
+        //     }
+        // };
+
+        const passwordError = (errors ? (
+            errors.map((error, idx) => {
+                if (error.includes("Password")) {
+                    return (
+                        <ul>
+                            <li key={idx}>{error}</li>
+                        </ul>
+                    )
+                }
+            })
+        ): "")
 
         const isSignup = (formType === 'sign up' ? (
             <div>
-                <label>First Name:
+                <label className="text-field">First Name:
                         <input
                         type="text"
                         value={fname}
@@ -89,7 +105,7 @@ class SessionSignupForm extends React.Component {
                 </label>
                 <br />
                 <br />
-                <label>Last Name:
+                <label className="text-field">Last Name:
                         <input
                         type="text"
                         value={lname}
@@ -103,14 +119,14 @@ class SessionSignupForm extends React.Component {
 
 
         return (
-            <div>
+            <div className="session-form ">
                 <h3>{formType}</h3>
 
                 <form onSubmit={this.handleSubmit}>
                     
                     {isSignup}
 
-                    <label>Email:
+                    <label className="text-field">Email:
                         <input
                             type="email"
                             value={email}
@@ -119,19 +135,22 @@ class SessionSignupForm extends React.Component {
                     </label>
                     <br />
                     <br />
-                    <label>Password:
+                    <label className="text-field">Password:
                         <input
                             type="password"
                             value={password}
                             onChange={this.update('password')}
                         />
                     </label>
-                    {fnameError}
-                    {passwordError}
+                    {/* {fnameError} */}
+                    {/* {passwordError} */}
                     <br />
                     <br />
-                    <button>{formType}</button>
+                    <button className="big-head-button">{formType}</button>
                 </form>
+                <br/>
+                {/* <button className="big-head-button" onClick={this.demo}>Demo User</button> */}
+                <Link to="/">Home</Link>
                 <p>{navLink}</p>
             </div>
         )
