@@ -21,9 +21,9 @@ class Trail < ApplicationRecord
     validates :difficulty, inclusion: { in: ['easy', 'moderate', 'difficult', 'hard' ]}
     validates :trail_name, :summary, :length, :elevation_gain, :latitude, :longitude, :park_id
 
-    # belongs_to :park,
-    #     primary_key: :id,
-    #     foreign_key: :park_id,
-    #     class_name: :park
+    belongs_to :park,
+        primary_key: :id,
+        foreign_key: :park_id,
+        class_name: :Park
  
 end
