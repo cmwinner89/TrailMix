@@ -19,7 +19,7 @@
 class Trail < ApplicationRecord
     validates :route_type, inclusion: { in: ['Loop', 'Out and back', 'Point to point']}
     validates :difficulty, inclusion: { in: ['easy', 'moderate', 'difficult', 'hard' ]}
-    validates :trail_name, :summary, :length, :elevation_gain, :latitude, :longitude, :park_id
+    validates :trail_name, :summary, :length, :elevation_gain, :latitude, :longitude, :park_id, presence: true
 
     belongs_to :park,
         primary_key: :id,

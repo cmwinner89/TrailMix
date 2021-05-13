@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {signUp, login, logout} from './util/session_api_util';
 import Root from './components/root';
 import configureStore from './store/store'
+import {fetchTrail, fetchTrails} from './actions/trail_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -27,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.signup = signUp;
     window.login = login;
     window.logout = logout;
+    window.fetchTrail = fetchTrail;
+    window.fetchTrails = fetchTrails;
 
     ReactDOM.render(<Root store={store}/>, root);
 });  

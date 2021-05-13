@@ -24,7 +24,6 @@ const receiveCurrentUser = (currentUser) => ({
 
 const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,
-//??
 });
 
 export const receiveErrors = (errors) => ({

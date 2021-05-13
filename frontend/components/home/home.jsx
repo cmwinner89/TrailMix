@@ -27,19 +27,28 @@ const Home = (state) => {
 
     return (
         <div className="homepage">
-            <div className="homepage-1" >
-                <h3>Find the trails where you belong!</h3>
+            <div className="homepage-section" >
+                <div className="search-container">
+                    <div className='search-text'>
+
+                    </div>
+                    <div className='search-button'>
+                        <img src="https://cdn.discordapp.com/attachments/768905648288956421/842228298889297950/3762887.png" />
+                    </div>
+                </div>
+                {/* <h3>Find the trails where you belong!</h3>
                 <p>*** Search bar goes here***</p>
-                <p>pic in the background</p>
-                <p>*******************</p>
+                <p>pic in the background</p> */}
+                 <img src="https://cdn.discordapp.com/attachments/768905648288956421/841833138035359754/1951020.png" />
+                {/* <p>*******************</p> */}
             </div>
-            <div className="homepage-2">
+            <div className="homepage-section">
                 <p>100,000+ trails, this where dreams are made </p>
                 <p>*******************</p>
             </div>
-            <div className="homepage-3">
-                <p>another pic of something sick</p>
-                <p>*******************</p>
+            <div className="homepage-section">
+                <img src="https://media.discordapp.net/attachments/768905648288956421/841832787945848832/rocky-mountains3.png?width=1440&height=675" />
+
             </div>
         </div>
       

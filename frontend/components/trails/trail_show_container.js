@@ -2,9 +2,12 @@ import { connect } from 'react-redux';
 import TrailShow from './trail_show';
 import { fetchTrail } from '../../actions/trail_actions';
 
-const mSTP = (state, ownProps) => ({
-    trail: state.trails[ownProps.match.params.trailId]
-});
+const mSTP = (state, ownProps) => {
+    
+    // console.log(state.entities);
+    console.log(ownProps);
+    return ({trail: state.entities.trails[ownProps.match.params.trailId]})
+};
 
 const mDTP = dispatch => ({
     fetchTrail: trailId => dispatch(fetchTrail(trailId))

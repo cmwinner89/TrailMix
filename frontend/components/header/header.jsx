@@ -1,8 +1,8 @@
 import React from 'react';
 import HomeContainer from '../home/home_container'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
-const Header = ({currentUser, logout}) => {
+const Header = ({currentUser, logout, history}) => {
 
    
     const isUser = (currentUser ? (
@@ -15,7 +15,7 @@ const Header = ({currentUser, logout}) => {
         <Link className='big-head-button' to='/login'>Login</Link>
     </div>)
 
-
+    
     return (
         <header className="big-head">
             <div className='big-head-section'>
@@ -23,7 +23,7 @@ const Header = ({currentUser, logout}) => {
             </div>
             <div className='big-head-section'>
                 {/* <Link to="/" > */}
-                    <img className="big-head-logo" src="https://cdn.discordapp.com/attachments/768905648288956421/841861903063973898/yeet.png" alt="" />
+                    <img onClick={() => history.push('/')} className="big-head-logo" src="https://cdn.discordapp.com/attachments/768905648288956421/841861903063973898/yeet.png" alt="" />
                     <p>TrailMix</p>
                 {/* </Link> */}
             </div>
