@@ -22,10 +22,11 @@ const Header = ({currentUser, logout, history}) => {
 
             </div>
             <div className='big-head-section'>
-                {/* <Link to="/" > */}
+               
                     <img onClick={() => history.push('/')} className="big-head-logo" src="https://cdn.discordapp.com/attachments/768905648288956421/841861903063973898/yeet.png" alt="" />
-                    <p>TrailMix</p>
-                {/* </Link> */}
+                    {/* <div className="header-name"> */}
+                        <p onClick={() => history.push('/')} >TrailMix</p>
+                    {/* </div> */}
             </div>
            {isUser}
         </header>

@@ -7,10 +7,10 @@ class SessionSignupForm extends React.Component {
         super(props);
 
         this.state = {
-            fname: '',
-            lname: '',
-            email: '',
-            password: ''
+            fname: 'First name',
+            lname: 'Last name',
+            email: 'Email',
+            password: 'Password'
         }
         // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -53,7 +53,7 @@ class SessionSignupForm extends React.Component {
         const { formType, errors, navLink } = this.props;
         // debugger
         const fnameError = (errors) => {
-            if(errors) {
+            if (errors) {
                 errors.map((error, idx) => {
                     if (error.includes("Fname")) {
                         return (
@@ -92,12 +92,13 @@ class SessionSignupForm extends React.Component {
                     )
                 }
             })
-        ): "")
+        ) : "")
 
         const isSignup = (formType === 'sign up' ? (
+
             <div>
-                <label className="text-field">First Name:
-                        <input
+                <label className="text-field">
+                    <input
                         type="text"
                         value={fname}
                         onChange={this.update('fname')}
@@ -106,8 +107,8 @@ class SessionSignupForm extends React.Component {
                 </label>
                 <br />
                 <br />
-                <label className="text-field">Last Name:
-                        <input
+                <label className="text-field">
+                    <input
                         type="text"
                         value={lname}
                         onChange={this.update('lname')}
@@ -121,41 +122,52 @@ class SessionSignupForm extends React.Component {
 
 
         return (
-            <div className="session-form ">
-                <h3>{formType}</h3>
+            <div className="session-form-container">
+                <div className="form-card">
 
-                <form onSubmit={this.handleSubmit}>
-                    
-                    {isSignup}
+                    <br />
+                    <form onSubmit={this.handleSubmit}>
 
-                    <label className="text-field">Email:
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={this.update('email')}
-                            required
-                        />
-                    </label>
-                    <br />
-                    <br />
-                    <label className="text-field">Password:
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={this.update('password')}
-                            required
-                        />
-                    </label>
-                    {/* {fnameError} */}
-                    {/* {passwordError} */}
-                    <br />
-                    <br />
-                    <button className="big-head-button">{formType}</button>
-                </form>
-                <br/>
-                {/* <button className="big-head-button" onClick={this.demo}>Demo User</button> */}
-                <Link to="/">Home</Link>
-                <p>{navLink}</p>
+                        <p className="form-title">Create your free account now!</p>
+
+                        {isSignup}
+
+                        <label className="text-field">
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={this.update('email')}
+                                required
+                            />
+                        </label>
+                        <br />
+                        <br />
+                        <label className="text-field">
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={this.update('password')}
+                                required
+                            />
+                        </label>
+                        {/* {fnameError} */}
+                        {/* {passwordError} */}
+                        <br />
+                        <br />
+                        <button className="login-button">{formType}</button>
+                        <br />
+                        <br />
+                        {/* <p>Alreadt have an account?</p> */}
+                        <p className="other-form"> Already have an account? {navLink}</p>
+
+                    </form>
+
+                    {/* <button className="big-head-button" onClick={this.demo}>Demo User</button> */}
+
+
+                </div>
+                <img src="https://images.unsplash.com/photo-1547890860-24c88b77778c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2003&q=80" />
+
             </div>
         )
     }
