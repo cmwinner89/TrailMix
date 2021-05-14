@@ -22,8 +22,14 @@
     font-family: 'Saira Condensed', sans-serif;
     font-size: 19px;
     align-items: center;
+    // margin-top: 5px;
 }
-
+.big-head-button > a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 .big-head-button:last-child {
     margin-right: 5px;
 }
@@ -35,6 +41,10 @@
     width: 33.333%;
     font-family: 'Saira Condensed', sans-serif;
    
+}
+
+.big-head-section > h2 {
+    font-size: 30px;
 }
 .big-head-section > p {
     font-size: 46px;
@@ -65,4 +75,20 @@
 
  .big-head-section > p:hover {
     cursor: pointer;
+}
+
+.link-button {
+    height: 30px;
+    width: 100px;
+    background-color: #E6692A;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 7px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 19px;
+    align-items: center;
+    padding-top: 5px;
 }

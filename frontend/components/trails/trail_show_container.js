@@ -4,8 +4,9 @@ import { fetchTrail } from '../../actions/trail_actions';
 
 const mSTP = (state, ownProps) => {
     
-    // console.log(state.entities);
-    console.log(ownProps);
+    console.log(state.entities);
+    // trail: state.entities.trails[ownProps.match.params.trailId]
+ 
     return ({trail: state.entities.trails[ownProps.match.params.trailId]})
 };
 

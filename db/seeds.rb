@@ -27,3 +27,8 @@ trail1 = Trail.create(trail_name: "Old Rag Mountain Loop", summary: "beautiful t
                       length: 9.5, elevation_gain: 2683, latitude: 38.17557607, longitude: -77.67188868, route_type: 'Loop',
                       difficulty: 'hard', park_id: park1.id
                     )
+
+trail2 = Trail.create(trail_name: "White Oak Canyon and Cedar Run Trail Loop", summary: "This trail is a 9 mile loop with moderate to heavy traffic.  It is located near Syria, Virginia and is not a trail for 
+                      beginners.  Features a lovely waterfall.  Is a big hiking and backpacking trail",  description: "If you enter by vehicle Shenandoah Nation Park will charge you a fee.  If you enter by foot or bike there will be no
+                      charge.  Annual pass are available as well!", length: 9, elevation_gain: 2372, latitude: 38.5398462, longitude: -78.355838,  route_type: "Loop", difficulty: "hard", park_id: park1.id
+                      )

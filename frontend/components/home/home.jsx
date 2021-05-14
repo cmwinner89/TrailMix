@@ -30,7 +30,7 @@ const Home = (state) => {
             <div className="homepage-section" >
                 <div className="search-container">
                     <div className="section-1-text">
-                        <div>Begin your journey</div>
+                        <div>Begin Your Journey</div>
                     </div>
                     <div className="search-bar">
                         <div className='search-text'>
@@ -54,12 +54,15 @@ const Home = (state) => {
                     <div>
                         <p>100,000+ trails. 20 million Explorers. Endless memories. </p>
                     </div>
-                    <div className="">
-                        <p>Create your free account now! <Link className='home-signup-button' to="/signup">Sign up</Link></p>
+                    <div className="sub-container-3">
+                        <p>Create your free account now! <Link to="/signup">Sign up</Link></p>
                     </div>
                 </div>
             </div>
             <div className="homepage-section">
+                <div className="homepage-section-3">
+                    <p>Stuff Goes Here</p>
+                </div>
                 <img src="https://images.unsplash.com/photo-1442965416224-f6a7eca980fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" />
                 {/* <p>Inspiration for where your trail leads</p> */}
             </div>

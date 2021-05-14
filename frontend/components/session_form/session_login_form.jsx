@@ -52,10 +52,13 @@ class SessionLoginForm extends React.Component {
                     {/* <h2>{formType}</h2> */}
                     {/* <h1>YO FROM LOGIN FORM</h1> */}
                     <form onSubmit={this.handleSubmit}>
+                        <div>
 
-                        <p className="login-form-title">Log in here and begin your journey</p>
+                            <p className="login-form-title">Log in here and begin your journey</p>
+                        </div>
                         <label className="text-field">
-                        <input
+                            <input
+                                className="input-text"
                                 type="email"
                                 placeholder="Email"
                                 value={email}
@@ -64,9 +67,10 @@ class SessionLoginForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <br />
+
                         <label className="text-field">
-                        <input
+                            <input
+                                className="input-text"
                                 type="password"
                                 placeholder="Password"
                                 value={password}
@@ -75,13 +79,17 @@ class SessionLoginForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <br />
+
                         <button className="login-button">{formType}</button>
                         <br />
-                        <p className="other-form">Don't have an account? {navLink}</p>
-                        <button className="big-head-button" onClick={this.demo}>Demo User</button>
+                        <div className="login-lower-text">
+
+                            <p className="other-form">Don't have an account? {navLink}</p>
+                            <div className="other-form" > Try as a demo user <a onClick={this.demo}>Demo User</a></div>
+                        </div>
+                        {/* <button className="big-head-button" onClick={this.demo}>Demo User</button> */}
                     </form>
-        
+
                 </div>
                 <img src="https://images.unsplash.com/photo-1618776574386-1003feb9e86f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80" />
             </div>

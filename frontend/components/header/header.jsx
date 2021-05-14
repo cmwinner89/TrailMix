@@ -11,8 +11,8 @@ const Header = ({currentUser, logout, history}) => {
             <button className="big-head-button" onClick={logout}>Logout</button>
         </div>
     ) : <div className='big-head-section'>
-        <Link className='big-head-button' to="/signup">Sign up</Link>
-        <Link className='big-head-button' to='/login'>Login</Link>
+        <Link className='link-button' to="/signup">Sign up</Link>
+        <Link className='link-button' to='/login'>Login</Link>
     </div>)
 
     

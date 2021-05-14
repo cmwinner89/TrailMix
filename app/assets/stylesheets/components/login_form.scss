@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     width: 500px;
-    height: 460px;  
+    height: 419px;  
     background-color: lightgray;
     border-radius: 10px;
     position: absolute;
@@ -27,11 +27,12 @@
     border-radius: 6px;
     border: none;
     font-size: 25px;
+    background-color: whitesmoke;
 }
 
 .login-button {
     height: 40px;
-    width: 94%;
+    width: 86%;
     background-color: #E6692A;
     border-radius: 5px;
     justify-content: center;
@@ -58,7 +59,9 @@
 
 .login-form-title {
     font-family: 'Saira Condensed', sans-serif;
-    font-size: 35px;
+    font-size: 38px;
+    position: relative;
+    top: -33px;
 }
 
 .other-form > a {
@@ -66,5 +69,26 @@
     color: #E6692A;
 }
 
+.login-lower-text {
+    position: relative;
+    bottom: -38px;
+}
+
+.other-form > a:hover {
+    cursor: pointer;
+}
+
+.input-text {
+    font-family: 'Saira Condensed', sans-serif;
+    text-align: left;
+    padding-left: 5px;
+}
+.text-field:hover {
+    border: 2px #E6692A;
+}
+
+.input-text:hover {
+    border: 2px #E6692A ;
+}
 
 

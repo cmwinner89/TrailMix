@@ -99,6 +99,7 @@ class SessionSignupForm extends React.Component {
             <div>
                 <label className="text-field">
                     <input
+                        className="input-text"
                         type="text"
                         value={fname}
                         placeholder=" Firstname"
@@ -107,9 +108,10 @@ class SessionSignupForm extends React.Component {
                     />
                 </label>
                 <br />
-                <br />
+
                 <label className="text-field">
                     <input
+                        className="input-text"
                         type="text"
                         placeholder=" Lastname"
                         value={lname}
@@ -118,7 +120,7 @@ class SessionSignupForm extends React.Component {
                     />
                 </label>
                 <br />
-                <br />
+
             </div>
         ) : "")
 
@@ -129,40 +131,48 @@ class SessionSignupForm extends React.Component {
 
                     <br />
                     <form className="signup-form" onSubmit={this.handleSubmit}>
-
-                        <p className="form-title">Create your free account now!</p>
+                        <div>
+                            <p className="form-title">Create your free account now!</p>
+                        </div>
 
                         {isSignup}
-
-                        <label className="text-field">
-                            <input
-                                type="email"
-                                placeholder=" Email"
-                                value={email}
-                                onChange={this.update('email')}
-                                required
-                            />
-                        </label>
+                        <div className="email-input">
+                            <label className="text-field">
+                                <input 
+                                    className="input-text"
+                                    type="email"
+                                    placeholder=" Email"
+                                    value={email}
+                                    onChange={this.update('email')}
+                                    required
+                                />
+                            </label>
+                        </div>
                         <br />
-                        <br />
-                        <label className="text-field">
-                            <input
-                                type="password"
-                                placeholder=" Password"
-                                value={password}
-                                onChange={this.update('password')}
-                                required
-                            />
-                        </label>
+                        <div className="password-input">
+                            <label className="text-field">
+                                <input 
+                                    className="input-text"
+                                    type="password"
+                                    placeholder=" Password"
+                                    value={password}
+                                    onChange={this.update('password')}
+                                    required
+                                />
+                            </label>
+                        </div>
                         {/* {fnameError} */}
                         {/* {passwordError} */}
                         <br />
-                        <br />
-                        <button className="signup-button">{formType}</button>
+                        <div>
+                            <button className="signup-button">{formType}</button>
+                        </div>
                         {/* <p>Alreadt have an account?</p> */}
-                        <p className="other-form"> Already have an account? {navLink}</p>
+                        <div className="lower-text">
+                            <p className="other-form"> Already have an account? {navLink}</p>
+                            <div className="other-form" > Try as a demo user <a onClick={this.demo}>Demo User</a></div>
+                        </div>
 
-                        <div className="other-form" > Try as a demo user <a onClick={this.demo}>Demo User</a></div>
                     </form>
 
 

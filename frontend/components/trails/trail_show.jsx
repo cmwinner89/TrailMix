@@ -1,13 +1,14 @@
 import React from 'react';
 import TrailMap from '../maps/trail_map';
+import NearbyTrailsContainer from './nearby_trails_container';
 
 class TrailShow extends React.Component {
 
     constructor(props) {
         super(props);
         // debugger
-        // console.log("YO FROM TRAILSHOW CONSTRUCTOR");
-        // console.log(this.props);
+        console.log("YO FROM TRAILSHOW CONSTRUCTOR");
+        console.log(this.props);
 
     }
 
@@ -27,7 +28,7 @@ class TrailShow extends React.Component {
                     </div>
 
                     <div className="trail-head">
-                        {this.props.trail ? <h3>{this.props.trail.trail_name}</h3> : <p>Please wait sir</p>}
+                        {this.props.trail ? <h3>{this.props.trail.trailName}</h3> : <p>Please wait sir</p>}
 
                     </div>
                     <div className="box">
@@ -46,7 +47,7 @@ class TrailShow extends React.Component {
 
                         </div>
                         <div className="nearby-trails-container">
-
+                            { this.props.trail ? <NearbyTrailsContainer trailId={this.props.trail.id}/> : <p>Please wait</p>}
                         </div>
                     </div>
                 </div>

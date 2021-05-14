@@ -38,8 +38,8 @@
     height: 50px;
     border-radius: 10px;
     display: flex;
-    // position: absolute;
-    // top: 130%;
+    position: relative;
+    bottom: -19px;
     // margin-top: 10px;
 }
 
@@ -48,6 +48,7 @@
     width: 80%;
     height: 100%;
     border-radius: 3px;   
+
 }
 .search-button {
     display: flex;
@@ -73,11 +74,16 @@
 }
 
 .search-bar-text {
-    height: 88%;
-    width: 314px;
+    height: 99%;
+    width: 320px;
     display: flex;
-     border-top-left-radius: 8px;
+    border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    background-color: gray;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Saira Condensed', sans-serif;
+    padding-left: 10px;
 }
 
 .home-signup-button {
@@ -100,10 +106,38 @@
 
 .section-1-text {
     // margin-top:  100px;
-    // position: absolute;
     // color: #D64033;
+    font-family: 'Saira Condensed', sans-serif;
     color: whitesmoke;
     font-size: 100px;
-    // top: 0px;
+    position: relative;
+    top: 0px;
     // width: 600px;
+}
+
+.homepage-section-3 {
+    position: absolute;
+    
+}
+
+.homepage-section-3 > p {
+    font-size: 100px;
+    color: whitesmoke;
+    // font-family: 'Saira Condensed', sans-serif;
+}
+
+.container-3{
+    position: relative;
+    bottom: -47px;
+    font-size: 67px;
+    // color: #E6692A;
+}
+
+.sub-container-3 {
+    margin: 100px;
+}
+.sub-container-3 > p > a {
+    // text-decoration: none;
+    color: #E6692A;
+    font-size: 83px;
 }

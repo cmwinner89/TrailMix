@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     width: 500px;
-    height: 550px;  
+    height: 516px;  
     background-color: lightgray;
     border-radius: 10px;
     position: absolute;
@@ -31,7 +31,7 @@
 
 .signup-button {
     height: 40px;
-    width: 100%;
+    width: 91%;
     background-color: #E6692A;
     border-radius: 5px;
     justify-content: center;
@@ -54,14 +54,38 @@
 .other-form {
     font-family: 'Saira Condensed', sans-serif;
     font-size: 20px;
+    height: 36px;
 }
 
 .form-title {
     font-family: 'Saira Condensed', sans-serif;
-    font-size: 35px;
+    font-size: 42px;
+    position: relative;
+    top: -27px;
 }
 
 .other-form > a {
     text-decoration: none;
     color: #E6692A;
 }
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.emali-input{
+    height: 100px;
+}
+
+.lower-text {
+    position: relative;
+    bottom: -25px;
+}
+
+.input-text::placeholder {
+    font-family: 'Saira Condensed', sans-serif;
+    text-align: left;
+
+} 

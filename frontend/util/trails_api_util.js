@@ -15,7 +15,20 @@ export const fetchTrail = (trailId) => {
     })
 };
 
-$.ajax({
-    method: 'GET',
-    url: `/api/trails/1`
-}).then(resp => console.log(resp));
+export const fetchNearbyTrails = (trailId) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/trails/nearby_trails/${trailId}`
+    })
+};
+
+
+// $.ajax({
+//     method: 'GET',
+//     url: `/api/trails/nearby_trails/3`
+// }).then(resp => console.log(resp));
+
+// $.ajax({
+//     method: 'GET',
+//     url: `/api/trails/3`
+// }).then(resp => console.log(resp));
