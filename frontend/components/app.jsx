@@ -6,6 +6,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HeaderContainer from './header/header_container';
 import TrailShowContainter from './trails/trail_show_container'
+import Footer from "./footer/footer";
 
 
 const App = () => (
@@ -19,7 +20,7 @@ const App = () => (
                 <AuthRoute path='/login' component={LoginFormContainer} />
                 <ProtectedRoute path='/trails/:trailId' component={TrailShowContainter} />
             {/* </Switch> */}
-   
+        <Footer />
     </div>
 )
 

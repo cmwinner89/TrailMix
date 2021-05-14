@@ -1,0 +1,23 @@
+.footer-section {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    background-color: lightgrey;
+}
+
+.footer-logo {
+    height: 66px;
+    width: 66px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.footer-section > p {
+    margin-top: 15px;
+    font-size: 60px;
+    margin-left: 7px;
+    font-family: 'Saira Condensed', sans-serif;
+    // display: flex;
+    // text-decoration: none;
+
+}

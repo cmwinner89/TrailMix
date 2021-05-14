@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :new, :show, :edit, :update, :delete]
     resource :session, only: [:create, :destroy]
     resources :trails, only: [:index, :show]
+    get 'trails/nearby_trails/:id', to: 'trails#nearby_trails' 
   end
-
   root to: 'static_pages#root'
 end

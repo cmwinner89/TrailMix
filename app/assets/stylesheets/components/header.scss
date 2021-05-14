@@ -2,7 +2,7 @@
 
 .big-head {
     width: 100%;
-    height: 65px;
+    height: 68px;
     // background-color: grey;
     margin: 0px;
     display: flex;
@@ -21,6 +21,7 @@
     color: whitesmoke;
     font-family: 'Saira Condensed', sans-serif;
     font-size: 19px;
+    align-items: center;
 }
 
 .big-head-button:last-child {
@@ -55,6 +56,7 @@
     height: 53px;
     width: 53px;
     margin-right: 7px;
+    margin-bottom: 3px;
 }
 
 .big-head-logo:hover {

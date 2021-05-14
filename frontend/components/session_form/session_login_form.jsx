@@ -6,8 +6,8 @@ class SessionLoginForm extends React.Component {
         super(props);
         // debugger
         this.state = {
-            email: 'Email',
-            password: 'Password'
+            email: '',
+            password: ''
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,17 +48,19 @@ class SessionLoginForm extends React.Component {
         // debugger
         return (
             <div className="session-form-container">
-                <div className="form-card">
+                <div className="login-form-card">
                     {/* <h2>{formType}</h2> */}
                     {/* <h1>YO FROM LOGIN FORM</h1> */}
                     <form onSubmit={this.handleSubmit}>
 
-                        <p className="form-title">Log in here and begin your journey</p>
+                        <p className="login-form-title">Log in here and begin your journey</p>
                         <label className="text-field">
                         <input
                                 type="email"
+                                placeholder="Email"
                                 value={email}
                                 onChange={this.update('email')}
+                                required
                             />
                         </label>
                         <br />
@@ -66,20 +68,22 @@ class SessionLoginForm extends React.Component {
                         <label className="text-field">
                         <input
                                 type="password"
+                                placeholder="Password"
                                 value={password}
                                 onChange={this.update('password')}
+                                required
                             />
                         </label>
                         <br />
                         <br />
                         <button className="login-button">{formType}</button>
                         <br />
-                        <button className="big-head-button" onClick={this.demo}>Demo User</button>
                         <p className="other-form">Don't have an account? {navLink}</p>
+                        <button className="big-head-button" onClick={this.demo}>Demo User</button>
                     </form>
         
                 </div>
-                <img src="https://images.unsplash.com/photo-1547890860-24c88b77778c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2003&q=80" />
+                <img src="https://images.unsplash.com/photo-1618776574386-1003feb9e86f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80" />
             </div>
         )
     }

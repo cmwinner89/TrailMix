@@ -7,14 +7,14 @@ class SessionSignupForm extends React.Component {
         super(props);
 
         this.state = {
-            fname: 'First name',
-            lname: 'Last name',
-            email: 'Email',
-            password: 'Password'
+            fname: '',
+            lname: '',
+            email: '',
+            password: ''
         }
         // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
-
+        this.demo = this.demo.bind(this);
     }
 
     update(field) {
@@ -44,7 +44,7 @@ class SessionSignupForm extends React.Component {
             email: "demo@trailmix.com",
             password: 'password'
         };
-
+        console.log(this.props.login);
         this.props.login(demoUser);
     }
 
@@ -101,6 +101,7 @@ class SessionSignupForm extends React.Component {
                     <input
                         type="text"
                         value={fname}
+                        placeholder=" Firstname"
                         onChange={this.update('fname')}
                         required
                     />
@@ -110,6 +111,7 @@ class SessionSignupForm extends React.Component {
                 <label className="text-field">
                     <input
                         type="text"
+                        placeholder=" Lastname"
                         value={lname}
                         onChange={this.update('lname')}
                         required
@@ -126,7 +128,7 @@ class SessionSignupForm extends React.Component {
                 <div className="form-card">
 
                     <br />
-                    <form onSubmit={this.handleSubmit}>
+                    <form className="signup-form" onSubmit={this.handleSubmit}>
 
                         <p className="form-title">Create your free account now!</p>
 
@@ -135,6 +137,7 @@ class SessionSignupForm extends React.Component {
                         <label className="text-field">
                             <input
                                 type="email"
+                                placeholder=" Email"
                                 value={email}
                                 onChange={this.update('email')}
                                 required
@@ -145,6 +148,7 @@ class SessionSignupForm extends React.Component {
                         <label className="text-field">
                             <input
                                 type="password"
+                                placeholder=" Password"
                                 value={password}
                                 onChange={this.update('password')}
                                 required
@@ -154,15 +158,13 @@ class SessionSignupForm extends React.Component {
                         {/* {passwordError} */}
                         <br />
                         <br />
-                        <button className="login-button">{formType}</button>
-                        <br />
-                        <br />
+                        <button className="signup-button">{formType}</button>
                         {/* <p>Alreadt have an account?</p> */}
                         <p className="other-form"> Already have an account? {navLink}</p>
 
+                        <div className="other-form" > Try as a demo user <a onClick={this.demo}>Demo User</a></div>
                     </form>
 
-                    {/* <button className="big-head-button" onClick={this.demo}>Demo User</button> */}
 
 
                 </div>

@@ -7,12 +7,12 @@
     align-items: center;
 }
 
-.form-card {
+.login-form-card {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 500px;
-    height: 550px;  
+    height: 460px;  
     background-color: lightgray;
     border-radius: 10px;
     position: absolute;
@@ -29,9 +29,9 @@
     font-size: 25px;
 }
 
-.signup-button {
+.login-button {
     height: 40px;
-    width: 100%;
+    width: 94%;
     background-color: #E6692A;
     border-radius: 5px;
     justify-content: center;
@@ -56,7 +56,7 @@
     font-size: 20px;
 }
 
-.form-title {
+.login-form-title {
     font-family: 'Saira Condensed', sans-serif;
     font-size: 35px;
 }
@@ -65,3 +65,6 @@
     text-decoration: none;
     color: #E6692A;
 }
+
+
+
