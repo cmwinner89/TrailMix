@@ -22,7 +22,9 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :new, :show, :edit, :update, :delete]
     resource :session, only: [:create, :destroy]
     resources :trails, only: [:index, :show]
+    resources :parks, only: [:show]
     get 'trails/nearby_trails/:id', to: 'trails#nearby_trails' 
+    get 'parks/trails_in_park/:id', to: 'parks#trails_in_park'
   end
   root to: 'static_pages#root'
 end

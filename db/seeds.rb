@@ -25,7 +25,7 @@ Trail.destroy_all
 
 trail1 = Trail.create(trail_name: "Old Rag Mountain Loop", summary: "beautiful trail", description: 'pay for parking, free if on foot',
                       length: 9.5, elevation_gain: 2683, latitude: 38.17557607, longitude: -77.67188868, route_type: 'Loop',
-                      difficulty: 'hard', park_id: park1.id
+                      difficulty: 'hard', park_id: 1
                     )
 
 trail2 = Trail.create(trail_name: "White Oak Canyon and Cedar Run Trail Loop", summary: "This trail is a 9 mile loop with moderate to heavy traffic.  It is located near Syria, Virginia and is not a trail for 

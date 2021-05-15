@@ -7,6 +7,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HeaderContainer from './header/header_container';
 import TrailShowContainter from './trails/trail_show_container'
 import Footer from "./footer/footer";
+import ParkShowContainer from './parks/parks_show_container';
 
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
                 <AuthRoute path='/signup' component={SignupFormContainer} />
                 <AuthRoute path='/login' component={LoginFormContainer} />
                 <ProtectedRoute path='/trails/:trailId' component={TrailShowContainter} />
+                <ProtectedRoute path='/parks/:parkId'  component={ParkShowContainer} />
             {/* </Switch> */}
         <Footer />
     </div>

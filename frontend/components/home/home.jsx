@@ -35,7 +35,8 @@ const Home = (state) => {
                     <div className="search-bar">
                         <div className='search-text'>
                             <form>
-                                <input className="search-bar-text" type="text" />
+                                <input 
+                                    className="search-bar-text" type="text" />
                             </form>
                         </div>
                         <div className='search-button'>
@@ -51,11 +52,11 @@ const Home = (state) => {
             </div>
             <div className="homepage-section">
                 <div className="container-3">
-                    <div>
+                    <div className="sub-container-2">
                         <p>100,000+ trails. 20 million Explorers. Endless memories. </p>
                     </div>
                     <div className="sub-container-3">
-                        <p>Create your free account now! <Link to="/signup">Sign up</Link></p>
+                        <p>Create your free account now! </p><Link to="/signup">Sign up</Link>
                     </div>
                 </div>
             </div>

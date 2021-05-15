@@ -21,4 +21,11 @@ class Api::TrailsController < ApplicationController
                 .where.not(id: params[:id])
     end
     
+    def trails_in_park
+        temp_trail = Trail.find(params[:id])
+
+        @trails_in_park = Trail
+                    .select('*')
+                    .where('park_id = ?', temp_trail.park_id)
+    end
 end

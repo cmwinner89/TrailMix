@@ -8,8 +8,8 @@
 #  description    :text
 #  length         :integer          not null
 #  elevation_gain :integer          not null
-#  latitude       :integer          not null
-#  longitude      :integer          not null
+#  latitude       :float            not null
+#  longitude      :float            not null
 #  route_type     :string           not null
 #  difficulty     :string           not null
 #  park_id        :integer          not null
@@ -27,5 +27,10 @@ class Trail < ApplicationRecord
         class_name: :Park
 
     has_one_attached :photo
+
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :trail_id,
+        class_name: :Review
  
 end
