@@ -14,12 +14,13 @@ User.destroy_all
 #     email: 'demo@trailmix.com',
 #     password: 'password'
 # )
+
 demo = User.create(fname: "Demo", lname: "User", email: "demo@trailmix.com", password: "password")
 
 Park.destroy_all
 
 park1 = Park.create(park_name: "Shenandoah National Park", summary: "Look for a great get away!  Come visit Shenandoah National Park, Virginia.",
-                    contact: "540-999-3500", acreage: 197439, park_type: 'national' )
+                    description: "Look for a great get away!  Come visit Shenandoah National Park, Virginia.  We have 247 amazing hiking trails!", contact: "540-999-3500", acreage: 197439, park_type: 'national' )
 
 Trail.destroy_all
 

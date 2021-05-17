@@ -21,4 +21,9 @@ class Park < ApplicationRecord
     primary_key: :id,
     foreign_key: :park_id,
     class_name: :Trail
+
+    has_many :photos,
+      primary_key: :id,
+      foreign_key: :park_id,
+      class_name: :Photo
 end

@@ -2,8 +2,11 @@ import { connect } from 'react-redux';
 import { fetchTrailsInPark } from '../../actions/park_actions';
 import TrailsInParkIndex from './trails_in_park_index';
 
-const mSTP = (state) => ({
-    trailsInPark: state.entities.parks.trailsInPark
+const mSTP = (state, ownProps) => ({
+    // console.log("OWNPROPS", ownProps);
+    trailsInPark: state.entities.parks.trailsInPark,
+    parkName: ownProps.parkName
+   
 })
 
 const mDTP = dispatch => ({

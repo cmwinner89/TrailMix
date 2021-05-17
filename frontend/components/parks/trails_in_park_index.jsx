@@ -1,4 +1,5 @@
 import React from 'react';
+import TrailsInParkItem from './trails_in_park_item';
 
 class TrailsInParkIndex extends React.Component {
     constructor (props) {
@@ -10,12 +11,24 @@ class TrailsInParkIndex extends React.Component {
     }
 
     render() {
-   
+        const { trailsInPark, parkName } = this.props;
+        if (!trailsInPark) {
+            return null;
+        }
         return (
-
-            <ul>
-
-            </ul>
+            <div>
+            {/* // <ul> */}
+                {
+                    trailsInPark.map(trail => (
+                        <TrailsInParkItem
+                            key={trail.id}
+                            trail={trail}
+                            parkName={parkName}
+                        />
+                    ))
+                }
+            {/* // </ul> */}
+            </div>
         )
     }
 }

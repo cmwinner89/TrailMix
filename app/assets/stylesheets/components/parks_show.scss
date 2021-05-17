@@ -5,8 +5,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // overflow: scroll;
+
 }
 
+@media only screen and (max-width: 1000px){
+    .park-show-container {
+        align-items: flex-start;
+    }
+}
 .park-pic-container {
     width: 100%;
     height: 250px;
@@ -14,8 +21,218 @@
 }
 .park-content {
     width: 100%;
-    height: 850px;
-    background-color: darkgoldenrod;
+    // height: 850px;
+    // background-color: darkgoldenrod;
     // position: absolute;
 }
 
+.park-title-container {
+    width: 100%;
+    height: 60px;
+    font-family: 'Saira Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    // padding-top: 10px;
+    // padding-left: 5px;
+}
+
+.rating-container {
+    width: 100%;
+    height: 40px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 30px;
+}
+
+.park-summary {
+    width: 100%;
+    height: 200px;
+    // background-color: lime;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.park-description-container {
+    // height: 600px;
+    // background-color: greenyellow;
+}
+
+.park-description-header {
+    width: 100%;
+    height: 60px;
+    // background-color: magenta;
+    font-family: 'Saira Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 25px;
+    border-top: solid gray 2px;
+    border-bottom: solid gray 2px;
+}
+
+.park-description-body {
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: 'Saira Condensed', sans-serif;
+    padding-bottom: 10px;
+
+}
+
+.park-map-container {
+    height: 295px;
+    width: 800px;
+    border: solid red 2px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.other-park-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 45px;
+    color: #E6692A;
+    width: 69%;
+    // background-color: green;
+}
+
+
+.park-information-container {
+    width: 100%;
+    height: 125px;
+    // background-color: greenyellow;
+    // display: flex;
+    border-top: solid gray 2px;
+    border-bottom: solid gray 2px;
+}
+
+.park-information-header {
+    // background-color: honeydew;
+    width: 100%;
+    height: 60px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 25px;
+    display: flex;
+    align-items: center;
+  
+}
+
+
+.park-information-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 47%;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 20px;
+}
+.park-information-details > p {
+    padding-bottom: 5px;
+}
+
+
+.trails-in-park-container {
+    width: 100%;
+   
+    // background-color: brown;
+//     position: relative;
+//     top: 0px;
+}
+
+.trails-in-park-sub-container{
+    // height: 200px;
+    // width: 100%;
+    // background-color: blue;
+    display: flex;
+    flex-direction: row;
+}
+
+.trail-in-park-img-container {
+    // border: solid red 2px;
+    height: 299px;
+    width: 299px;
+    font-family: 'Saira Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    
+}
+
+.trail-in-park-img {
+    border: solid blue 2px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+}
+
+.trail-in-park-details-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.trail-in-park-card-container {
+    width: 70%;
+}
+
+.trail-in-trailName-parkName {
+    // display: flex;
+    // justify-content: flex-end;
+    // flex-direction: column;
+    border-bottom: solid gray 2px;
+    margin-bottom: 6px;
+}
+.trail-in-park-name {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 35px;
+ 
+}
+
+.trail-in-park-park-name {
+    font-family: 'Saira Condensed', sans-serif;
+    padding-top: 2px;
+    padding-left: 0px;
+}
+
+.trail-in-park-indepth-details-cont {
+    border-bottom: solid gray 2px;
+    padding-bottom: 6px;
+    // font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.trail-in-park-diff-rating-cont{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Saira Condensed', sans-serif;
+    // justify-content: space-between;
+    // width: 100%;
+}
+.trail-in-park-difficulty{
+    padding-right: 25px;
+    // padding-left: 13px;
+}
+
+.trail-in-park-legnth-container {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Saira Condensed', sans-serif;
+
+}
+.trail-in-park-legnth-container > p{
+    padding-right: 7px;
+}
+.trail-in-park-summary-container {
+    font-family: 'Saira Condensed', sans-serif;
+    // font-size: 20px;
+}

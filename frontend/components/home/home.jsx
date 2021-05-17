@@ -36,7 +36,9 @@ const Home = (state) => {
                         <div className='search-text'>
                             <form>
                                 <input 
-                                    className="search-bar-text" type="text" />
+                                    className="search-bar-text" 
+                                    type="text" 
+                                />
                             </form>
                         </div>
                         <div className='search-button'>
@@ -62,7 +64,7 @@ const Home = (state) => {
             </div>
             <div className="homepage-section">
                 <div className="homepage-section-3">
-                    <p>Stuff Goes Here</p>
+                    <p>If You Can Dream It, You Can Do It!</p>
                 </div>
                 <img src="https://images.unsplash.com/photo-1442965416224-f6a7eca980fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" />
                 {/* <p>Inspiration for where your trail leads</p> */}

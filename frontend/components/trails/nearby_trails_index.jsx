@@ -21,10 +21,10 @@ class NearbyTrailsIndex extends React.Component {
 
         return (
             <div>
-                <ul>
+                {/* <ul> */}
                     {
                         nearbyTrails.map(trail => {
-                            console.log("Yo from nearbytrails map", trail);
+                            // console.log("Yo from nearbytrails map", trail);
                             return (<NearbyTrailsItem
                                 key={trail.id}
                                 trail={trail}
@@ -32,7 +32,7 @@ class NearbyTrailsIndex extends React.Component {
                             />)
                         })
                     }
-                </ul>
+                {/* </ul> */}
             </div>
         )
     }

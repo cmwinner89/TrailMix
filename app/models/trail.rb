@@ -6,7 +6,7 @@
 #  trail_name     :string           not null
 #  summary        :text             not null
 #  description    :text
-#  length         :integer          not null
+#  length         :float            not null
 #  elevation_gain :integer          not null
 #  latitude       :float            not null
 #  longitude      :float            not null
@@ -26,11 +26,14 @@ class Trail < ApplicationRecord
         foreign_key: :park_id,
         class_name: :Park
 
-    has_one_attached :photo
-
     has_many :reviews,
         primary_key: :id,
         foreign_key: :trail_id,
         class_name: :Review
+
+    has_many :photos,
+        primary_key: :id,
+        foreign_key: :trail_id,
+        class_name: :Photo
  
 end

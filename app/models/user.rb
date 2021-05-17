@@ -22,6 +22,11 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Review
 
+    has_many :photos,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Photo
+        
     attr_reader :password
     after_initialize :ensure_session_token
 
