@@ -5,4 +5,4 @@ require_relative 'application'
 Rails.application.initialize!
 
 #format jbuilder
-Jbuilder.key_format camelize: :lower
+# Jbuilder.key_format camelize: :lower

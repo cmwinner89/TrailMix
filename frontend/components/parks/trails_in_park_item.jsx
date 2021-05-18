@@ -3,12 +3,12 @@ import React from 'react';
 const TrailsInParkItem = (props) => {
 
     const { trail } = props;
-    // console.log("yo from trailsItem", props);
+    console.log("yo from trailsItem", props);
     return (
         <div className='trails-in-park-sub-container'>
             <div className="trail-in-park-img-container">
                 <div className="trail-in-park-img">
-                    <p>IMG</p>
+                    <img src={props.trail.backgroundPhotoUrl} />
                 </div>
             </div>
             <div className="trail-in-park-card-container">

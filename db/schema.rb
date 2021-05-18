@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_17_024537) do
+ActiveRecord::Schema.define(version: 2021_05_18_170921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_024537) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "park_type", null: false
+    t.string "backgroundPhotoUrl"
     t.index ["park_name"], name: "index_parks_on_park_name"
   end
 
@@ -86,6 +87,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_024537) do
     t.integer "park_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "backgroundPhotoUrl"
     t.index ["park_id"], name: "index_trails_on_park_id"
     t.index ["trail_name"], name: "index_trails_on_trail_name"
   end

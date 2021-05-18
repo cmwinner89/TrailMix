@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     get 'parks/trails_in_park/:id', to: 'parks#trails_in_park'
 
     resources :reviews, only: [:create, :show, :index, :new, :update, :destroy]
+
+    resources :photos, only: [:create, :index]
   end
   root to: 'static_pages#root'
 end

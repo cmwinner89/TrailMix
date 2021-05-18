@@ -2,6 +2,7 @@ import React from 'react';
 import TrailsInParkContainer from './trails_in_park_container';
 import TrailMap from '../maps/trail_map';
 
+
 class ParkShow extends React.Component {
 
     constructor(props) {
@@ -45,7 +46,7 @@ class ParkShow extends React.Component {
                         </div>
                         <div className="title-rating">
                             <div className="park-title-container">
-                                {this.props.park ? <p>{park.parkName}</p> : ""}
+                               <p>{park.parkName}</p>
                             </div>
                             <div className="rating-container">
                                 <p>rating: ⚝⚝⚝⚝⚝ </p>
@@ -101,7 +102,7 @@ class ParkShow extends React.Component {
                            
                             <div className='trail-in-park-details-container'>
 
-                                {this.props.park ? <TrailsInParkContainer parkId={this.props.park.id} parkName={this.props.park.parkName} /> : " "}
+                                {<TrailsInParkContainer parkId={this.props.park.id} parkName={this.props.park.parkName} />}
                             </div>
                         </div>
                     </div>

@@ -13,7 +13,7 @@
 #
 class Photo < ApplicationRecord
 
-    validates :post_date, :user_id, :trail_id, :park_id, presence: true
+    validates :user_id, :trail_id, :park_id, presence: true
 
     belongs_to :user,
         primary_key: :id,

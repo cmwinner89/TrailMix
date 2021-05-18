@@ -36,4 +36,6 @@ class Trail < ApplicationRecord
         foreign_key: :trail_id,
         class_name: :Photo
  
+    has_one_attached :backgroundPhoto
+
 end

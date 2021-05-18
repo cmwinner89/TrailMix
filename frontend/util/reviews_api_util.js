@@ -43,3 +43,24 @@ export const deleteReview = (reviewId) => {
     })
 };
 
+
+// $.ajax({
+//     method: 'GET',
+//     url: `/api/reviews`
+// }).then(resp => console.log(resp));
+
+// $.ajax({
+//     method: 'GET',
+//     url: `/api/reviews/1`
+// }).then(resp => console.log(resp));3
+// review2 = Review.create( post_date: "2018-07-22", rating: 5, review: "The view from the summit was amazing!", user_id: demo.id, trail_id: trail1.id)
+// $.ajax({
+//     method: 'POST',
+//     url: `/api/reviews`
+// })
+
+
+
+
+
+

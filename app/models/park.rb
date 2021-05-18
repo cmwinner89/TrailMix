@@ -26,4 +26,7 @@ class Park < ApplicationRecord
       primary_key: :id,
       foreign_key: :park_id,
       class_name: :Photo
+
+      has_one_attached :backgroundPhoto
+      
 end

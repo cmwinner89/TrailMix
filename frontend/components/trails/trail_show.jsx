@@ -1,6 +1,10 @@
 import React from 'react';
 import TrailMap from '../maps/trail_map';
+import ReviewIndex from '../reviews/review_index';
 import NearbyTrailsContainer from './nearby_trails_container';
+import ReviewIndexContainer from '../reviews/review_index_container';
+import ReviewFormContainer from '../reviews/review_form_container';
+
 
 class TrailShow extends React.Component {
 
@@ -9,17 +13,29 @@ class TrailShow extends React.Component {
         // debugger
         // console.log("YO FROM TRAILSHOW CONSTRUCTOR");
         // console.log(this.props);
+        this.state = {
+            trailId: this.props.match.params.trailId
+        }
 
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchTrail(this.props.match.params.trailId);
     }
+
 
     render() {
         // const {trail_name, summary, description, } = this.props.trail;
 
-
+        if (!this.props.trail) {
+            return null;
+        }
+        
+        console.log("curr", this.props.currentUser);
+        const renderReview = (this.props.currentUser ? (
+         <ReviewIndexContainer />
+        ) : "")
+        console.log(this.props.trail);
         return (
             <div className="trail-container">
                 <div className="content-container">
@@ -45,11 +61,11 @@ class TrailShow extends React.Component {
                     <div className="trail-head">
                         <div className="trail-name-stats-container">
                             <div className="trail-name">
-                                {this.props.trail ? <p>{this.props.trail.trailName}</p> : <p>Please wait sir</p>}
+                               <p>{this.props.trail.trailName}</p> 
                             </div>
                             <div className="stats-container">
                                 <div className="difficulty">
-                                    {this.props.trail ? <p>{this.props.trail.difficulty}</p> : ""}
+                                    <p>{this.props.trail.difficulty}</p>
                                 </div>
                                 <div className="rating">
                                     <div>rating:⚝⚝⚝⚝⚝ </div>
@@ -65,7 +81,7 @@ class TrailShow extends React.Component {
 
                         </div>
                         <div className="trail-img-container">
-                            <img src="https://images.unsplash.com/photo-1494472155656-f34e81b17ddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" />
+                            <img src={this.props.trail.backgroundPhotoUrl} />
                         </div>
                     </div>
 
@@ -73,7 +89,7 @@ class TrailShow extends React.Component {
                     <div className="trail-info-container">
                         <div className="trail-info-sub-container">
                             <div className="trail-summary">
-                                {this.props.trail ? <p>{this.props.trail.summary}</p> : <p>Please wait sir</p>}
+                                <p>{this.props.trail.summary}</p>
                             </div>
                             <div className="trail-details">
                                 <div className="length-div">
@@ -82,16 +98,16 @@ class TrailShow extends React.Component {
                                     </div>
                                     <div className="trail-length">
                                         <h3>Length</h3>
-                                        {this.props.trail ? <p>{this.props.trail.length} mi.</p> : ""}
+                                      <p>{this.props.trail.length} mi.</p>
                                     </div>
                                 </div>
                                 <div className="trail-elevation">
                                     <h3>Elevation gain</h3>
-                                    {this.props.trail ? <p>{this.props.trail.elevationGain} ft.</p> : ""}
+                                   <p>{this.props.trail.elevationGain} ft.</p>
                                 </div>
                                 <div className="trail-route-type">
                                     <p>Route type</p>
-                                    {this.props.trail ? <p>{this.props.trail.routeType}</p> : ""}
+                                   <p>{this.props.trail.routeType}</p> 
                                 </div>
                             </div>
                             <div className="description-header">
@@ -99,12 +115,12 @@ class TrailShow extends React.Component {
                             </div>
 
                             <div className="trail-description">
-                                {this.props.trail ? <p>{this.props.trail.description}</p> : ''}
+                            <p>{this.props.trail.description}</p>
                             </div>
                         </div>
                         <div className="map-box">
 
-                            {this.props.trail ? <TrailMap longitude={this.props.trail.longitude} latitude={this.props.trail.latitude} /> : <p>WAIT</p>}
+                            <TrailMap longitude={this.props.trail.longitude} latitude={this.props.trail.latitude} />
                         </div>
                     </div>
 
@@ -114,9 +130,11 @@ class TrailShow extends React.Component {
                                 <div className="reviews-header">
                                     <p>Reviews</p>
                                 </div>
+                                <div className="add-review-container">
+                                    {<ReviewFormContainer trail_id={this.props.trail.id}/>}
+                                </div>
                                 <div className="all-reviews">
-
-
+                                   {<ReviewIndexContainer />}
                                 </div>
                             </div>
                         </div>
@@ -127,7 +145,7 @@ class TrailShow extends React.Component {
                                 </div>
                                 <div className="nearby-trails-info">
 
-                                    {this.props.trail ? <NearbyTrailsContainer trailId={this.props.trail.id} /> : <p>Please wait</p>}
+                                     <NearbyTrailsContainer trailId={this.props.trail.id} /> 
                                 </div>
                             </div>
                         </div>
