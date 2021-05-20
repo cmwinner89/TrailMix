@@ -9,9 +9,9 @@ class Api::PhotosController < ApplicationController
         @photo = Post.new(photo_params)
 
         if @photo.save!
-            render json {message: "Save successful"}
+            # render json {message: "Save successful"}
         else
-            render json: @photo.errors.full_messages
+            # render json: @photo.errors.full_messages
         end
     end
 
