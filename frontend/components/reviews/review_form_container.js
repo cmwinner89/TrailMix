@@ -3,17 +3,18 @@ import ReviewForm from './review_form';
 import { createReview, updateReview, deleteReview } from '../../actions/review_actions';
 
 const mSTP = (state, ownProps) => {
-    console.log("Yo from reveiwContainer", state);
-    console.log("Yo from reveiwContainer", ownProps);
+    // console.log("Yo from reveiwContainer", state);
+    // console.log("Yo from reveiwContainer", ownProps);
     return ({
         review: {
             post_date: '',
-            rating: 0,
+            rating: 1,
             review: '',
             user_id: state.session.id,
             trail_id: ownProps.trail_id
         },
-        currentUserId: state.session.id
+        currentUserId: state.session.id,
+       
     });
 
 }

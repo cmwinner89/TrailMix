@@ -2,11 +2,11 @@ import React from 'react';
 import TrailsInParkItem from './trails_in_park_item';
 
 class TrailsInParkIndex extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
-        console.log("Yo from TrailsInParkIndex", this.props);
+        // console.log("Yo from TrailsInParkIndex", this.props);
     }
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchTrailsInPark(this.props.parkId);
     }
 
@@ -17,7 +17,6 @@ class TrailsInParkIndex extends React.Component {
         }
         return (
             <div>
-            {/* // <ul> */}
                 {
                     trailsInPark.map(trail => (
                         <TrailsInParkItem
@@ -27,7 +26,6 @@ class TrailsInParkIndex extends React.Component {
                         />
                     ))
                 }
-            {/* // </ul> */}
             </div>
         )
     }

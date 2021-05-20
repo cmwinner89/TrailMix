@@ -33,8 +33,8 @@ const removeReview = (reviewId) => ({
     reviewId
 });
 
-export const fetchReviews = () => dispatch => {
-    return ReviewApiUti.fetchReviews()
+export const fetchReviews = (trail_id) => dispatch => {
+    return ReviewApiUti.fetchReviews(trail_id)
         .then(reviews => dispatch(receiveAllReviews(reviews)))
 };
 

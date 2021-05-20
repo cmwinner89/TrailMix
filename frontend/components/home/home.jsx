@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Search from '../searches/search';
 
 const Home = (state) => {
 
@@ -32,19 +32,7 @@ const Home = (state) => {
                     <div className="section-1-text">
                         <div>Begin Your Journey</div>
                     </div>
-                    <div className="search-bar">
-                        <div className='search-text'>
-                            <form>
-                                <input 
-                                    className="search-bar-text" 
-                                    type="text" 
-                                />
-                            </form>
-                        </div>
-                        <div className='search-button'>
-                            <img src="https://cdn.discordapp.com/attachments/768905648288956421/842228298889297950/3762887.png" />
-                        </div>
-                    </div>
+                    <Search />
                 </div>
                 {/* <h3>Find the trails where you belong!</h3>
                 <p>*** Search bar goes here***</p>

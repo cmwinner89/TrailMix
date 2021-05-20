@@ -6,10 +6,10 @@
 
 
 
-export const fetchReviews = () => {
+export const fetchReviews = (trail_id) => {
     return $.ajax({
         method: 'GET',
-        url: '/api/reviews'
+        url: `/api/trails/${trail_id}/reviews`
     })
 };
 

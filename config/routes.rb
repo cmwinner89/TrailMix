@@ -21,14 +21,17 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :new, :show, :edit, :update, :delete]
     resource :session, only: [:create, :destroy]
-    resources :trails, only: [:index, :show]
-    resources :parks, only: [:show]
+    resources :trails, only: [:index, :show] do
+      resources :reviews, only: [:index]
+      resources :photos, only: [:index]
+    end
+    resources :parks, only: [:show, :index]
     get 'trails/nearby_trails/:id', to: 'trails#nearby_trails' 
     get 'parks/trails_in_park/:id', to: 'parks#trails_in_park'
 
-    resources :reviews, only: [:create, :show, :index, :new, :update, :destroy]
-
-    resources :photos, only: [:create, :index]
+    resources :reviews, only: [:create, :show, :new, :update, :destroy] 
+    resources :search, only: [:index]
+    resources :photos, only: [:create]
   end
   root to: 'static_pages#root'
 end

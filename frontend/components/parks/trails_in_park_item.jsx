@@ -1,11 +1,19 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 const TrailsInParkItem = (props) => {
 
     const { trail } = props;
-    console.log("yo from trailsItem", props);
+    const history = useHistory();
+    
+    const cardClickHandle = (e) => {
+        e.preventDefault();
+
+        history.push(`/trails/${trail.id}`);
+    }
+    // console.log("yo from trailsItem", props);
     return (
-        <div className='trails-in-park-sub-container'>
+        <div onClick={cardClickHandle} className='trails-in-park-sub-container'>
             <div className="trail-in-park-img-container">
                 <div className="trail-in-park-img">
                     <img src={props.trail.backgroundPhotoUrl} />

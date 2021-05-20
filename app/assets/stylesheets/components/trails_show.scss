@@ -31,7 +31,7 @@
 }
 .sub-nav-search-container {
     display: flex;
-
+    position: relative;
 }
 // .sub-search-text-bar {
 //     height: 50px;
@@ -66,6 +66,8 @@
     // margin-left: 10px;
     font-family: 'Saira Condensed', sans-serif;
     font-size: 15px;
+    display: flex;
+    flex-direction: row;
 }
 .sub-search-button:hover {
     cursor: pointer;
@@ -267,10 +269,12 @@
 
 .trail-name {
     font-family: 'Saira Condensed', sans-serif;
-    font-size: 30px;
+    font-size: 44px;
     color: whitesmoke;
     font-weight: bold;
     padding-left: 15px;
+    // color: #E6692A;
+    // color: gray;
 }
 
 .other-action-container {
@@ -408,9 +412,10 @@
 .review-card-container {
     border: solid gray 2px;
     border-radius: 8px;
-    // padding: 4px;
-
-    // padding-left: 4px;
+    width: 506px;
+    height: 150px;
+    font-family: 'Saira Condensed', sans-serif;
+    margin-bottom: 15px;
 }
 
 .review-user-info-cont{
@@ -432,5 +437,18 @@
 }
 .review-card-postDate{
     padding-right: 28px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-card-user-name {
+    display: flex;
+    flex-direction: row;
+}
+.review-first-name {
+    padding-right: 6px;
 }
 

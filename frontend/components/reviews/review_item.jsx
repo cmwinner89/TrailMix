@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReviewItem = (props) => {
     // console.log("Yo from reviewItem", props);
-    const { postDate, rating, review } = props.review;
+    const { post_date, rating, review } = props.review;
 
     return (
         <div className='review-card-container'>
@@ -11,12 +11,17 @@ const ReviewItem = (props) => {
                     <p>User Pic</p>
                 </div>
                 <div className='review-card-user-name'>
-                    <p>User</p>
+                    <div className="review-first-name">
+                        {props.user_fname}
+                    </div>
+                    <div className="review-last-name">
+                        {props.user_lname}
+                    </div>
                 </div>
             </div>
             <div className="review-card-post-rating-cont">
                 <div className="review-card-postDate">
-                    {postDate}
+                    {post_date}
                 </div>
                 <div>
                     {rating}

@@ -14,6 +14,13 @@ export const fetchTrailsInPark = (parkId) => {
     })
 }
 
+export const fetchParks = () => {
+    return $.ajax({
+        method: 'GET',
+        url: '/api/parks'
+    })
+};
+
 // $.ajax({
 //     method: 'GET',
 //     url: `/api/parks/5`

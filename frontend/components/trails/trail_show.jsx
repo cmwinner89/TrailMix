@@ -4,7 +4,7 @@ import ReviewIndex from '../reviews/review_index';
 import NearbyTrailsContainer from './nearby_trails_container';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import ReviewFormContainer from '../reviews/review_form_container';
-
+import SubSearch from '../searches/sub_search';
 
 class TrailShow extends React.Component {
 
@@ -12,15 +12,17 @@ class TrailShow extends React.Component {
         super(props);
         // debugger
         // console.log("YO FROM TRAILSHOW CONSTRUCTOR");
-        // console.log(this.props);
+        console.log("Yo from trail show", this.props.trail);
         this.state = {
             trailId: this.props.match.params.trailId
+
         }
 
     }
 
     componentDidMount() {
         this.props.fetchTrail(this.props.match.params.trailId);
+        // this.props.fetchPark(this.state.trail.park_id);
     }
 
 
@@ -30,10 +32,13 @@ class TrailShow extends React.Component {
         if (!this.props.trail) {
             return null;
         }
-        
-        console.log("curr", this.props.currentUser);
+        // if(!this.props.park) {
+        //     return null;
+        // }
+
+        // console.log("curr", this.props.currentUser);
         const renderReview = (this.props.currentUser ? (
-         <ReviewIndexContainer />
+            <ReviewIndexContainer />
         ) : "")
         console.log(this.props.trail);
         return (
@@ -41,34 +46,26 @@ class TrailShow extends React.Component {
                 <div className="content-container">
                     <div className="sub-nav">
                         <div className="trail-location-container">
-                            <p>United States {' > '} Virginia {' > '} Shenandoah National Park </p>
+                            <p>United States {' > '} </p>
+                            <p> Shenandoah National Park</p>
                         </div>
-                        <div className="sub-nav-search-container">
-                            <div className="sub-search-text-bar">
-                                <form>
-                                    <input
-                                        className="sub-search-bar-text"
-                                        type="text"
-                                    />
-                                </form>
-                            </div>
-                            <div className="sub-search-button">
-                                <img src="https://cdn.discordapp.com/attachments/768905648288956421/842228298889297950/3762887.png" />
-                            </div>
-                        </div>
+                        <SubSearch />
                     </div>
 
                     <div className="trail-head">
                         <div className="trail-name-stats-container">
                             <div className="trail-name">
-                               <p>{this.props.trail.trailName}</p> 
+                                <p>{this.props.trail.trail_name}</p>
                             </div>
                             <div className="stats-container">
                                 <div className="difficulty">
                                     <p>{this.props.trail.difficulty}</p>
                                 </div>
                                 <div className="rating">
-                                    <div>rating:⚝⚝⚝⚝⚝ </div>
+                                    <div>rating: </div>
+                                    <div className="active-star">
+                                        ⚝⚝⚝⚝⚝
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -98,16 +95,16 @@ class TrailShow extends React.Component {
                                     </div>
                                     <div className="trail-length">
                                         <h3>Length</h3>
-                                      <p>{this.props.trail.length} mi.</p>
+                                        <p>{this.props.trail.length} mi.</p>
                                     </div>
                                 </div>
                                 <div className="trail-elevation">
                                     <h3>Elevation gain</h3>
-                                   <p>{this.props.trail.elevationGain} ft.</p>
+                                    <p>{this.props.trail.elevation_gain} ft.</p>
                                 </div>
                                 <div className="trail-route-type">
                                     <p>Route type</p>
-                                   <p>{this.props.trail.routeType}</p> 
+                                    <p>{this.props.trail.route_type}</p>
                                 </div>
                             </div>
                             <div className="description-header">
@@ -115,7 +112,7 @@ class TrailShow extends React.Component {
                             </div>
 
                             <div className="trail-description">
-                            <p>{this.props.trail.description}</p>
+                                <p>{this.props.trail.description}</p>
                             </div>
                         </div>
                         <div className="map-box">
@@ -131,10 +128,10 @@ class TrailShow extends React.Component {
                                     <p>Reviews</p>
                                 </div>
                                 <div className="add-review-container">
-                                    {<ReviewFormContainer trail_id={this.props.trail.id}/>}
+                                    {<ReviewFormContainer trail_id={this.props.trail.id} />}
                                 </div>
                                 <div className="all-reviews">
-                                   {<ReviewIndexContainer />}
+                                    {<ReviewIndexContainer />}
                                 </div>
                             </div>
                         </div>
@@ -144,8 +141,7 @@ class TrailShow extends React.Component {
                                     <p>Nearby Trails</p>
                                 </div>
                                 <div className="nearby-trails-info">
-
-                                     <NearbyTrailsContainer trailId={this.props.trail.id} /> 
+                                    <NearbyTrailsContainer trailId={this.props.trail.id} />
                                 </div>
                             </div>
                         </div>

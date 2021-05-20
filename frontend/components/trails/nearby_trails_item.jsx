@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 const NearbyTrailsItem = ({ trail, trailId }) => {
 
     const history = useHistory();
+
     const cardClickHandle = (e) => {
         e.preventDefault();
 
@@ -12,7 +13,6 @@ const NearbyTrailsItem = ({ trail, trailId }) => {
     }
     // console.log("Yo from nearbytrailsitem", trail, trailId);
     return (
-        // <li>
         <div >
             <div onClick={cardClickHandle} className="trail-card-container">
 
@@ -22,7 +22,7 @@ const NearbyTrailsItem = ({ trail, trailId }) => {
                 <div className="trail-card-details">
                     <div className="trail-card-trail-name">
 
-                        {trail.trailName} :
+                        {trail.trail_name}
                     </div>
                     <div className="trail-card-park_type">
                         <p>National Park</p>
@@ -37,10 +37,7 @@ const NearbyTrailsItem = ({ trail, trailId }) => {
                     </div>
                 </div>
             </div>
-            {/* {trail.parkId.parkName} */}
-
         </div>
-        // </li>
     )
 }
 

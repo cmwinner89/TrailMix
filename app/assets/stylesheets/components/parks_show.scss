@@ -17,7 +17,15 @@
 .park-pic-container {
     width: 100%;
     height: 250px;
-    background-color: blue;
+    overflow: hidden;
+    background-size: cover;
+    border-radius: 8px;
+    // background-color: blue;
+}
+
+.park-pic-container > img {
+    width: 100%;
+    height: 100%;
 }
 .park-content {
     width: 100%;
@@ -42,6 +50,11 @@
     height: 40px;
     font-family: 'Saira Condensed', sans-serif;
     font-size: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.rating-container > p {
+    margin-right: 5px;
 }
 
 .park-summary {
@@ -52,10 +65,7 @@
     font-size: 20px;
 }
 
-.park-description-container {
-    // height: 600px;
-    // background-color: greenyellow;
-}
+
 
 .park-description-header {
     width: 100%;
@@ -153,10 +163,13 @@
     display: flex;
     flex-direction: row;
 }
+.trails-in-park-sub-container:hover {
+    cursor: pointer;
+}
 
 .trail-in-park-img-container {
     // border: solid red 2px;
-    height: 299px;
+    height: 244px;
     width: 299px;
     font-family: 'Saira Condensed', sans-serif;
     display: flex;

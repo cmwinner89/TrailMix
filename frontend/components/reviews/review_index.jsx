@@ -5,11 +5,15 @@ class ReviewIndex extends React.Component {
 
     constructor(props) {
         super(props)
-        // console.log("Yo from reviewIndex constructor", this.props);
+
+       
+       
+        console.log("Yo from reviewIndex constructor", this.props);
     }
 
-    componentDidMount() {
-        this.props.fetchReviews();
+    componentDidMount() {   
+        // getTrailId();
+        this.props.fetchReviews(this.props.match.params.trailId);
     }
 
     render() {
@@ -32,6 +36,9 @@ class ReviewIndex extends React.Component {
                             <ReviewItem
                                 key={review.id}
                                 review={review}
+                                user_fname={this.props.currentUser.fname}
+                                user_lname={this.props.currentUser.lname}
+                                user_id={this.props.currentUser.id}
                             />)
                     })
                 }

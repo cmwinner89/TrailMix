@@ -4,6 +4,10 @@ class Api::ParksController < ApplicationController
         @park = Park.find(params[:id])
     end
     
+    def index
+        @parks = Park.all
+    end
+
     def trails_in_park
         temp_park = Park.find(params[:id])
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import TrailsInParkContainer from './trails_in_park_container';
-import TrailMap from '../maps/trail_map';
-
+import ParkMap from '../maps/park_map';
+import SubSearch from '../searches/sub_search';
 
 class ParkShow extends React.Component {
 
@@ -10,7 +10,7 @@ class ParkShow extends React.Component {
         // console.log("Yo from park show", this.props);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchPark(this.props.match.params.parkId);
     }
 
@@ -19,6 +19,12 @@ class ParkShow extends React.Component {
         if (!park) {
             return null
         }
+
+        const stars = [];
+
+        // for (let i = 1; 1<6; i++) {
+
+        // }
         return (
             <div className="park-show-container">
                 <div className="content-container">
@@ -26,30 +32,22 @@ class ParkShow extends React.Component {
                         <div className="trail-location-container">
                             <p>United States {'>'} Virginia {'>'} Shenandoah National Park </p>
                         </div>
-                        <div className="sub-nav-search-container">
-                            <div className="sub-search-text-bar">
-                                <form>
-                                    <input
-                                        className="sub-search-bar-text"
-                                        type="text"
-                                    />
-                                </form>
-                            </div>
-                            <div className="sub-search-button">
-                                <img src="https://cdn.discordapp.com/attachments/768905648288956421/842228298889297950/3762887.png" />
-                            </div>
-                        </div>
+                        <SubSearch />
                     </div>
                     <div className="park-content">
                         <div className="park-pic-container" >
-                            <p>sick pics of park</p>
+                            {/* <p>sick pics of park</p> */}
+                            <img src="https://blackburn-inn.com/wp-content/uploads/2019/09/the-Best-Time-to-Visit-Shenandoah-National-Park-for-Fall-Colors-1487x609.jpg" />
                         </div>
                         <div className="title-rating">
                             <div className="park-title-container">
-                               <p>{park.parkName}</p>
+                                <p>{park.park_name}</p>
                             </div>
                             <div className="rating-container">
-                                <p>rating: ⚝⚝⚝⚝⚝ </p>
+                                <p>Rating: </p>
+                                <div className="active-star">
+                                    ⚝⚝⚝⚝⚝
+                                </div>
                             </div>
                         </div>
                         <div className="park-summary-container">
@@ -68,7 +66,8 @@ class ParkShow extends React.Component {
 
                             <div className="park-map-container">
                                 {/* <TrailMap latitude={50} longitude={-77}/> */}
-                                <p>MAP</p>
+                                {/* <p>MAP</p> */}
+                                <ParkMap  latitude={50} longitude={-77}/>
                             </div>
 
                             <div className="other-park-actions">
@@ -99,7 +98,7 @@ class ParkShow extends React.Component {
                             <p>Top Trails</p>
                         </div>
                         <div className='trails-in-park-sub-container'>
-                           
+
                             <div className='trail-in-park-details-container'>
 
                                 {<TrailsInParkContainer parkId={this.props.park.id} parkName={this.props.park.parkName} />}

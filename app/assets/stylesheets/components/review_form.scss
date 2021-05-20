@@ -4,6 +4,7 @@
     padding: 5px;
     padding-top: 10px;
     display: flex;
+    justify-content: center;
 }
 
 .review-form-container {
@@ -12,12 +13,8 @@
     align-items: center;
     width: 100%;
     // background-color: green;
-    padding-left: 25px;
+    padding-left: 47px;
     padding-right: 25px;
-}
-
-.review-form-container input {
-    background-color: gray;
 }
 
 .review-post-date-container {
@@ -30,18 +27,27 @@
 }
 .review-date-input {
     border: solid gray 1px;
-    // width: 300px;
+    width: 218px;
+    height: 30px;
+    font-size: 19px;
     border-radius: 8px;
+    font-family: 'Saira Condensed', sans-serif;
+
 }
 
 .review-rating-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    font-family: 'Saira Condensed', sans-serif;
+    align-items: center;
+
 }
 
 .review-text-container {
     display: flex;
     flex-direction: column;
+    font-family: 'Saira Condensed', sans-serif;
+
 }
 
 .review-rating-stars {
@@ -62,4 +68,69 @@
 .active-star {
     // background-color: red;
     color: gold;
+}
+
+.review-text-input {
+    height: 150px;
+    width: 450px;
+    padding-left: 8px;
+    margin-bottom: 15px;
+}
+
+.review-title {
+    font-size: 35px;
+    font-family: 'Saira Condensed', sans-serif;
+    // margin-top: 10px;
+    // margin-bottom: 4px;
+    padding-right: 5px;
+
+}
+.big-review-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.big-head-button-1 {
+    height: 30px;
+    width: 114px;
+    background-color: #E6692A;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    // margin: 0px 7px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 19px;
+    align-items: center;
+    // margin-top: 5px;
+
+}
+
+.review-form-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.big-head-button-2 {
+    height: 30px;
+    width: 114px;
+    background-color: #E6692A;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 19px;
+    align-items: center;
+}
+
+.review-action-buttons {
+    display: flex;
+    justify-content: space-around;
+    // width: 100%;
 }
