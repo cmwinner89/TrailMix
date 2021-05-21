@@ -14,7 +14,10 @@ TrailMix backend is built using Ruby on Rails framework and PostgreSql database.
 
 ## Reasuable search for parks
 
-On TrailMix the user will be able to travel to the parks show page.  There much info will be displayed about the park.  The user will also be given some information about the trails within the park and on a click will be able to travel to that trails show page.  I passed in a <park_id> to each trail and was able to extract the trails that had the same
-<park_id> as the <id> of the park.
+On TrailMix the user will be able to travel to the parks show page.  There much info will be displayed about the park.  The user will also be given some information about the trails within the park and on a click will be able to travel to that trails show page.  I passed in a `park_id` to each trail and was able to extract the trails that had the same
+`park_id` as the `id` of the park. I was able to use the same logic for my nearby trails as well.
+
+[finding nearby trails based on ids](![Screenshot 2021-05-21 095548](https://user-images.githubusercontent.com/24721324/119148914-f955d500-ba1a-11eb-8099-d35f40487963.png)
+
 
 
