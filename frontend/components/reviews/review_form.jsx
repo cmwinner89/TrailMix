@@ -63,7 +63,7 @@ class ReviewForm extends React.Component {
                 <div className="big-review-container">
                     <div className="review-action-buttons">
                         <button className="big-head-button" onClick={() => this.toggleReviewHandler()}>Write review</button>
-                        <button className="big-head-button">Upload Photo</button>
+                        {/* <button className="big-head-button">Upload Photo</button> */}
                     </div>
                 </div>
             )
