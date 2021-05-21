@@ -39,5 +39,8 @@ On trailMix the user is able to search for their favorite park or trail.  The se
 ![Screenshot 2021-05-21 100904](https://user-images.githubusercontent.com/24721324/119150603-982f0100-ba1c-11eb-8011-92e1ccfcf1c7.png)
 
 
+##Future Features
+
+Implement aws properly so users can upload their favorite picutres of the trail. Also give the users the ability to views picutres of other users on the specified trail show page and show their own pictures
 
 
