@@ -38,4 +38,5 @@ class Trail < ApplicationRecord
  
     has_one_attached :backgroundPhoto
 
+    
 end
