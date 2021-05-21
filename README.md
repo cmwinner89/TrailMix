@@ -10,3 +10,11 @@ TrailMix is an Alltrails.com clone, users are able to search for their favorite 
 TrailMix backend is built using Ruby on Rails framework and PostgreSql database.  The frontend of the site is built with React, using Redux to manage the frontend state.  Jquery $.ajax() function is used for all the AJAX.
 
 
+## Features 
+
+## Reasuable search for parks
+
+On TrailMix the user will be able to travel to the parks show page.  There much info will be displayed about the park.  The user will also be given some information about the trails within the park and on a click will be able to travel to that trails show page.  I passed in a <park_id> to each trail and was able to extract the trails that had the same
+<park_id> as the <id> of the park.
+
+
