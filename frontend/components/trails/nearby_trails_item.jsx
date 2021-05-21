@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
-
+import { fetchPark } from '../../actions/park_actions';
 
 const NearbyTrailsItem = ({ trail, trailId }) => {
 
     const history = useHistory();
+    const dispatch = useDispatch();
 
+    useEffect(() => (
+        dispatch(fetchPark(trail.park_id))
+    ), [])
+
+    const park = useSelector((state) => state.entities.parks[trail.park_id]);
     const cardClickHandle = (e) => {
         e.preventDefault();
 
         history.push(`/trails/${trailId}`);
     }
-    // console.log("Yo from nearbytrailsitem", trail, trailId);
+    // console.log("Yo from nearbytrailsitem", park);
     return (
         <div >
             <div onClick={cardClickHandle} className="trail-card-container">
@@ -25,11 +32,14 @@ const NearbyTrailsItem = ({ trail, trailId }) => {
                         {trail.trail_name}
                     </div>
                     <div className="trail-card-park_type">
-                        <p>National Park</p>
+                        {park ? park.park_name : ""}
                     </div>
                     <div className="trail-card-difficulty-rating">
                         {trail.difficulty}
-                        <p>rating: ⚝⚝⚝⚝⚝</p>
+                        <p>rating: </p>
+                        <div className="active-star">
+                            ⚝⚝⚝⚝⚝
+                        </div>
                     </div>
                     <div className="trail-card-length">
                         <p>Length: </p>

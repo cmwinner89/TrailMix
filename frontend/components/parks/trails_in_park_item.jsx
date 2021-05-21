@@ -24,7 +24,7 @@ const TrailsInParkItem = (props) => {
                 <div className="trail-in-trailName-parkName">
 
                     <div className="trail-in-park-name">
-                        <p>{trail.trailName}</p>
+                        <p>{trail.trail_name}</p>
                     </div>
                     <div className="trail-in-park-park-name">
                         <p>{props.parkName}</p>
@@ -37,8 +37,11 @@ const TrailsInParkItem = (props) => {
                             {trail.difficulty}
                         </div>
                         <div className="trail-in-park-rating">
-                            <p>rating: ⚝⚝⚝⚝⚝ </p>
-                            {/* {trail.rating} */}
+                            <p>rating: </p>
+                            <div className='active-star'>
+                                ⚝⚝⚝⚝⚝
+                            </div>
+                         
                         </div>
                     </div>
                     <div className="trail-in-park-legnth-container">

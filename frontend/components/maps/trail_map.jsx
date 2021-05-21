@@ -30,7 +30,16 @@ class TrailMap extends React.Component {
             center: [longitude, latitude],
             zoom: zoom
         })
+        
+        let x = document.createElement('div');
+        x.className = "marker";
+        new mapboxgl.Marker(x)
+            .setLngLat([this.state.latitude, this.state.longitude])
+            .addTo(map)
+
     }
+
+
 
     render() {
 

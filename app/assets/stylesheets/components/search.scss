@@ -18,7 +18,7 @@
         align-items: center;
         height: 40px;
         // margin-top: 5px;
-        z-index: 99;
+        z-index: 7;
         font-size: 18px;
         border-top: solid #E6692A 2px;
     }
@@ -45,7 +45,7 @@
     transform: translateY(100%);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    z-index: 99;
+    z-index: 7;
     display: flex;
     flex-direction: column;
     overflow: hidden;

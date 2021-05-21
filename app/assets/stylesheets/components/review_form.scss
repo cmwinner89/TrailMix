@@ -134,3 +134,61 @@
     justify-content: space-around;
     // width: 100%;
 }
+
+.review-card-rating-cont {
+    display: flex;
+    flex-direction: row;
+    padding-right: 4px;
+    padding-bottom: 4px;
+}
+.review-card-rating-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.review-card-post-rating-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.review-card-user-img {
+    height: 50px;
+    width: 50px;
+    font-size: 35px;
+    color: #E6692A;
+    padding-left: 5px;
+}
+
+.review-delete-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 179px;
+    right: -22px;
+    padding-right: 5px;
+}
+
+.review-delete-container:hover {
+    cursor: pointer;
+}
+
+.svg-inline--fa {
+    height: 50px;
+}
+.review-card-sub-container {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid gray 2px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.review-card-text-container {
+    padding-top: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 5px;
+}

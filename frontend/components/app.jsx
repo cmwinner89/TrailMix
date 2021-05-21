@@ -13,15 +13,13 @@ import ParkShowContainer from './parks/parks_show_container';
 const App = () => (
     <div>
         <HeaderContainer />
-         
-      
-            {/* <Switch> */}
-                <Route exact path="/" component={HomeContainer} />
-                <AuthRoute path='/signup' component={SignupFormContainer} />
-                <AuthRoute path='/login' component={LoginFormContainer} />
-                <Route path='/trails/:trailId' component={TrailShowContainter} />
-                <ProtectedRoute path='/parks/:parkId'  component={ParkShowContainer} />
-            {/* </Switch> */}
+
+        <Route exact path="/" component={HomeContainer} />
+        <AuthRoute path='/signup' component={SignupFormContainer} />
+        <AuthRoute path='/login' component={LoginFormContainer} />
+        <Route path='/trails/:trailId' component={TrailShowContainter} />
+        <Route path='/parks/:parkId' component={ParkShowContainer} />
+
         <Footer />
     </div>
 )

@@ -81,8 +81,15 @@
     height: 550px;
     position: relative;
     // background-color: yellow;
-    border-bottom: solid #E6692A 50px;
+   
     overflow: hidden;
+    // z-index: 6px;
+}
+.border {
+    border-bottom: solid #E6692A 50px;
+    position: relative;
+    z-index: 6;
+    bottom: -500px;
 }
 
 .trail-info-container {
@@ -113,7 +120,7 @@
 .trail-details {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
     top: 6%;
     border-top: solid gray 2px;
@@ -134,17 +141,10 @@
     width: 30px;
     margin-right: 3px;
 }
-// .trail-length >h3 {
-//     font-size: 24px;
-//     font-weight: 15px;
-// }
 
-// .trail-length > p {
-//     font-size: 19px;
-// }
+
 .trail-length:last-child {
-    // display: flex;
-    // flex-direction: column;
+ 
     margin-top: 2px;
 }
 
@@ -243,6 +243,17 @@
     height: 100%
 }
 
+.trail-directions-container {
+    font-size: 50px;
+}
+
+.trail-directions-container > a {
+    text-decoration: none;
+    color: white;
+   
+}
+
+
 .trail-name-stats-container {
     position: absolute;
     width: 500px;
@@ -279,15 +290,16 @@
 
 .other-action-container {
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
     z-index: 8;
     // background-color: yellow;
     position: absolute;
-    bottom: 0px;
+    bottom: 12px;
     width: 100%;
     font-family: 'Saira Condensed', sans-serif;
     font-size: 50px;
     color: whitesmoke;
+    left: 89px;
 
 }
 
@@ -416,27 +428,23 @@
     height: 150px;
     font-family: 'Saira Condensed', sans-serif;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .review-user-info-cont{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 20%;
-    margin-bottom: 4px;
+    // justify-content: space-between;
+    // width: 250px;
+    width: 100%;
+    // margin-bottom: 4px;
 }
 
-.review-card-post-rating-cont {
-    display: flex;
-    flex-direction: row;
-    // justify-content: space-between;
-    // width: 21%;
-    
-    border-bottom: solid gray 2px;
-    margin-bottom: 7px;
-}
-.review-card-postDate{
-    padding-right: 28px;
+
+.review-card-post-date{
+    padding-right: 10px;
+    padding-top: 4px;
 }
 
 .rating {
@@ -447,6 +455,9 @@
 .review-card-user-name {
     display: flex;
     flex-direction: row;
+    position: relative;
+    top: 11px;
+    font-size: 20px;
 }
 .review-first-name {
     padding-right: 6px;

@@ -51,6 +51,12 @@ class Api::UsersController < ApplicationController
         end
     end
 
+    def index 
+        @users = User.all
+
+        render :index
+    end
+
     private 
 
     # def selected_user

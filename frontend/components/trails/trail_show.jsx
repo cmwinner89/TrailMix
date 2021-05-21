@@ -4,6 +4,8 @@ import ReviewIndex from '../reviews/review_index';
 import NearbyTrailsContainer from './nearby_trails_container';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import ReviewFormContainer from '../reviews/review_form_container';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDirections } from "@fortawesome/free-solid-svg-icons";
 import SubSearch from '../searches/sub_search';
 
 class TrailShow extends React.Component {
@@ -14,22 +16,27 @@ class TrailShow extends React.Component {
         // console.log("YO FROM TRAILSHOW CONSTRUCTOR");
         console.log("Yo from trail show", this.props.trail);
         this.state = {
-            trailId: this.props.match.params.trailId
-
+            trailId: this.props.match.params.trailId,
+            // park: this.props.entities.parks
         }
 
     }
 
     componentDidMount() {
-        this.props.fetchTrail(this.props.match.params.trailId);
-        // this.props.fetchPark(this.state.trail.park_id);
+        this.props.fetchTrail(this.props.match.params.trailId)
+        .then(() => this.props.fetchPark(this.props.trail.park_id))
+        
     }
+
+    // componentDidUpdate() {
+    //     this.props.fetchTrail(this.props.match.params.trailId);
+    // }
 
 
     render() {
         // const {trail_name, summary, description, } = this.props.trail;
-
-        if (!this.props.trail) {
+        // console.log("BIG PROPS", this.props)
+        if (!this.props.trail ) {
             return null;
         }
         // if(!this.props.park) {
@@ -40,14 +47,15 @@ class TrailShow extends React.Component {
         const renderReview = (this.props.currentUser ? (
             <ReviewIndexContainer />
         ) : "")
-        console.log(this.props.trail);
+
+        console.log("YOYOYYO", this.state);
         return (
             <div className="trail-container">
                 <div className="content-container">
                     <div className="sub-nav">
                         <div className="trail-location-container">
-                            <p>United States {' > '} </p>
-                            <p> Shenandoah National Park</p>
+                            <p>United States {' > '} Shendandoah National Park</p>
+                            {/* { this.state.park ? this.state.park.park_name : ''} */}
                         </div>
                         <SubSearch />
                     </div>
@@ -70,9 +78,15 @@ class TrailShow extends React.Component {
                             </div>
                         </div>
                         <div className="other-action-container">
-                            <p>dir</p>
-                            <p>print</p>
-                            <p>share</p>
+                            <div className='trail-directions-container'>
+                                <a target="_blank" href={`https://www.google.com/maps/dir/Current+Location/${this.props.trail.latitude},${this.props.trail.longitude}`}>
+                                    <FontAwesomeIcon icon={faDirections} />
+                                </a>
+                            </div>
+                            <div className="trail-print-container">
+                                {/* <a href={'javascript:window.print()'}>Print</a> */}
+                            </div>
+            
                         </div>
                         <div className="border">
 
@@ -91,7 +105,7 @@ class TrailShow extends React.Component {
                             <div className="trail-details">
                                 <div className="length-div">
                                     <div className="trail-length-img">
-                                        <img src="https://static.thenounproject.com/png/3396001-200.png" />
+                                        {/* <img src="https://static.thenounproject.com/png/3396001-200.png" /> */}
                                     </div>
                                     <div className="trail-length">
                                         <h3>Length</h3>

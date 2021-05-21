@@ -20,6 +20,7 @@ class ParkMap extends React.Component {
             zoom: 9
         }
         this.mapContainer = React.createRef();
+
     }
 
     componentDidMount() {
@@ -32,7 +33,16 @@ class ParkMap extends React.Component {
         })
     }
 
+
+
+
     render() {
+
+        // let x = document.createElement('div');
+        // x.className = "marker";
+        // new mapboxgl.Marker(x)
+        //     .setLngLat([latitude, longitude])
+        //     .addTo(map)
 
         return (
             <div>

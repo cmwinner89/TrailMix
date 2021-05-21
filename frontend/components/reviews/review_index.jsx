@@ -6,8 +6,7 @@ class ReviewIndex extends React.Component {
     constructor(props) {
         super(props)
 
-       
-       
+        
         console.log("Yo from reviewIndex constructor", this.props);
     }
 
@@ -26,8 +25,9 @@ class ReviewIndex extends React.Component {
 
         // console.log("Yo from reviewIndex render 2", this.props);
 
-
+        
         return (
+            
             <div>
                 {
                     this.props.reviews.map(review => {
@@ -36,9 +36,10 @@ class ReviewIndex extends React.Component {
                             <ReviewItem
                                 key={review.id}
                                 review={review}
-                                user_fname={this.props.currentUser.fname}
-                                user_lname={this.props.currentUser.lname}
-                                user_id={this.props.currentUser.id}
+                                deleteReview={this.props.deleteReview}
+                                // user_fname={this.props.currentUser.fname}
+                                // user_lname={this.props.currentUser.lname}
+                                // user_id={this.props.currentUser.id}
                             />)
                     })
                 }
