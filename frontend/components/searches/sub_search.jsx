@@ -14,8 +14,8 @@ const SubSearch = () => {
     const parks = useSelector((state) => state.entities.parks.parks);
     const trails = useSelector((state) => state.entities.trails.trails);
 
-    console.log("parks", parks);
-    console.log("trails", trails);
+    // console.log("parks", parks);
+    // console.log("trails", trails);
     const [filterParks, setFilterParks] = useState([]);
     const [filterTrails, setFilterTrails] = useState([]);
 

@@ -23,7 +23,7 @@ park1 = Park.create(park_name: "Shenandoah National Park", summary: "Look for a 
 
 park2 = Park.create(park_name: 'Yellow Stone National Park', summary: "Looking for a great trail in Yellowstone National Park, Wyoming? AllTrails has 253 great hiking trails, trail running trails, mountain biking trails and more, with hand-curated trail maps and driving directions as well as detailed reviews and photos from hikers, campers, and nature lovers like you. Ready for some activity? There are 118 moderate trails in Yellowstone National Park ranging from 0.8 to 49.5 miles and from 0 to 10,255 feet above sea level. Start checking them out and you'll be out on the trail in no time!",
                     description: "Yellowstone National Park is America's first national park. Its landscape is vast spanning three states: Wyoming, Montana and Idaho. The park is home to a variety of wildlife including grizzly bears, wolves, bison, and elk. Yellowstone is most famous for Old Faithful and a collection of the world's most extraordinary geysers and hot springs.", contact: '307-344-7381', acreage: 2219790, park_type: 'national',
-                    backgroundPhotoUrl: "https://img.sunset02.com/sites/default/files/styles/4_3_horizontal_inbody_900x506/public/image/2016/09/main/canyon-trail_0.jpg", lat: 43.4799, lng: -110.7624
+                    backgroundPhotoUrl: "https://www.planetware.com/wpimages/2020/08/wyoming-yellowstone-national-park-attractions-tips-tours-touring-the-park.jpg", lat: 43.4799, lng: -110.7624
                     )
 
 Trail.destroy_all
@@ -51,12 +51,12 @@ trail4 = Trail.create(trail_name: "Mathews Arm Overall Run Trail", summary: 'Mat
                       )
 
 trail5 = Trail.create(trail_name: "Grand Prismatic Hot Spring", summary: 'Grand Prismatic Hot Spring is a 1.6 mile heavily trafficked out and back trail located near Yellowstone National Park, Wyoming that features hot springs and is good for all skill levels. The trail is primarily used for walking.',
-                        description: "Subject to closure due to wildlife activity.", length: 1.6, elevation_gain: 200, latitude: 44.5252108, longitude: -110.8382667, route_type: 'Out and back', difficulty: "easy", park_id: park2.id,
+                        description: "Subject to closure due to wildlife activity.", length: 1.6, elevation_gain: 200, latitude: 44.5252108, longitude: -90.0, route_type: 'Out and back', difficulty: "easy", park_id: park2.id,
                         backgroundPhotoUrl: "https://fullsuitcase.com/wp-content/uploads/2019/02/Seeing-the-Grand-Prismatic-Spring-is-one-of-the-must-do-things-in-Yellowstone.jpg"
                       )
 trail6 = Trail.create(trail_name: "Mystic Falls, Fairy Creek and Little Firehole Loop", summary: "Mystic Falls, Fairy Creek and Little Firehole Loop is a 3.5 mile heavily trafficked loop trail located near Yellowstone National Park, Wyoming that features a waterfall and is rated as moderate.",
-                        description: "Subject to closure due to wildlife activity.", length: 3.5, elevation_gain: 606, latitude: 44.483831398, longitude: -110.870996516, route_type: 'Loop', difficulty: "moderate", park_id: park2.id,
-                        backgroundPhotoUrl: "https://www.10adventures.com/wp-content/uploads/2018/10/Mystic-Falls_DSC03380.jpg"
+                        description: "Subject to closure due to wildlife activity.", length: 3.5, elevation_gain: 606, latitude: 44.483831398, longitude: -90.0, route_type: 'Loop', difficulty: "moderate", park_id: park2.id,
+                        backgroundPhotoUrl: "https://i.pinimg.com/originals/dc/1a/54/dc1a5413e34c7c090015045fc45a5013.jpg"
                       )
 trail7 = Trail.create(trail_name: "Hawksbill Gap Loop", summary: "Hawksbill Gap Loop via Appalachian Trail is a 2.6 mile heavily trafficked loop trail located near Syria, Virginia that features beautiful wild flowers and is rated as moderate.",
                         description:  "If you enter by vehicle Shenandoah Nation Park will charge you a fee.  If you enter by foot or bike there will be no

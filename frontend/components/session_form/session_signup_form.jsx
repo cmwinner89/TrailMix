@@ -44,7 +44,7 @@ class SessionSignupForm extends React.Component {
             email: "demo@trailmix.com",
             password: 'password'
         };
-        console.log(this.props.login);
+        // console.log(this.props.login);
         this.props.login(demoUser);
     }
 

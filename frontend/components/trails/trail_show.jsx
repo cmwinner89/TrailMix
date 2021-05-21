@@ -14,7 +14,7 @@ class TrailShow extends React.Component {
         super(props);
         // debugger
         // console.log("YO FROM TRAILSHOW CONSTRUCTOR");
-        console.log("Yo from trail show", this.props.trail);
+        // console.log("Yo from trail show", this.props.trail);
         this.state = {
             trailId: this.props.match.params.trailId,
             // park: this.props.entities.parks
@@ -29,7 +29,9 @@ class TrailShow extends React.Component {
     }
 
     // componentDidUpdate() {
-    //     this.props.fetchTrail(this.props.match.params.trailId);
+    //     this.props.fetchTrail(this.props.match.params.trailId)
+    //         .then(() => this.props.fetchPark(this.props.trail.park_id))
+
     // }
 
 
@@ -48,7 +50,7 @@ class TrailShow extends React.Component {
             <ReviewIndexContainer />
         ) : "")
 
-        console.log("YOYOYYO", this.state);
+        // console.log("YOYOYYO", this.state);
         return (
             <div className="trail-container">
                 <div className="content-container">

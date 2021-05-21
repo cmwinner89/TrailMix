@@ -5,7 +5,7 @@ import { fetchPark } from '../../actions/park_actions';
 
 const mSTP = (state, ownProps) => {
     
-    console.log("state from container", state);
+    // console.log("state from container", state);
     // trail: state.entities.trails[ownProps.match.params.trailId]
  
     return ({

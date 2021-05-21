@@ -17,7 +17,7 @@ const ReviewItem = (props) => {
 
     const owner = useSelector((state) => state.entities.users[props.review.user_id])
     const currentUser = useSelector((state) => state.entities.users[state.session.id])
-    console.log("YOYOYOYO", props.review.trail_id);
+    // console.log("YOYOYOYO", props.review.trail_id);
     // console.log(props);
     const stars = [];
 

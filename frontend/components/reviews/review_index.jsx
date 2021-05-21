@@ -7,7 +7,7 @@ class ReviewIndex extends React.Component {
         super(props)
 
         
-        console.log("Yo from reviewIndex constructor", this.props);
+        // console.log("Yo from reviewIndex constructor", this.props);
     }
 
     componentDidMount() {   

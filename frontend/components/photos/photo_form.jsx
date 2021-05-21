@@ -6,8 +6,9 @@ const PhotoForm = (props) => {
 
     const dispatch = useDispatch();
     const user_id = useSelector((state) => state.session.id)
+
     useEffect(() => {
-        
+            
     }, [])
     return (
         <div>
