@@ -1,6 +1,6 @@
 # TrailMix
 
-* [Live Site](https://trail-mix-app.herokuapp.com/#/)
+[Live Site](https://trail-mix-app.herokuapp.com/#/)
 
 Things you may want to cover:
 
