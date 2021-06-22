@@ -2,7 +2,7 @@
     position: absolute;
     width: 80%;
 
-    background-color: gray;
+    background-color: white;
     bottom: 5px;
     transform: translateY(100%);
     border-bottom-left-radius: 8px;
@@ -11,12 +11,11 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    &__item { 
-        // background-color: red;
+    &__item {
         display: flex;
-        justify-content: center;
         align-items: center;
         height: 40px;
+        padding-left: 8px;
         // margin-top: 5px;
         z-index: 7;
         font-size: 18px;
@@ -40,7 +39,8 @@
     position: absolute;
     width: 83%;
 
-    background-color: rgb(49, 53, 55);
+    // background-color: rgb(49, 53, 55);
+    background-color: white;
     bottom: 3px;
     transform: translateY(100%);
     border-bottom-left-radius: 8px;
@@ -52,9 +52,10 @@
     &__item { 
         // background-color: red;
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
         height: 40px;
+        padding-left: 8px;
         // margin-top: 5px;
         z-index: 99;
         font-size: 18px;
