@@ -9,7 +9,6 @@ class ParkShow extends React.Component {
 
     constructor(props) {
         super(props);
-        // console.log("Yo from park show", this.props);
     }
 
     componentDidMount() {
@@ -37,7 +36,6 @@ class ParkShow extends React.Component {
                     </div>
                     <div className="park-content">
                         <div className="park-pic-container" >
-                            {/* <img src={this.props.park.backgroundPhotoUrl}/> */}
                             <img src={park.backgroundPhotoUrl}/>
                         </div>
                         <div className="title-rating">
@@ -75,8 +73,6 @@ class ParkShow extends React.Component {
                                     <FontAwesomeIcon icon={faDirections} />
                                 </a>
                             </div>
-                                {/* <p>print</p>
-                                <p>share</p> */}
                             </div>
                         </div>
 

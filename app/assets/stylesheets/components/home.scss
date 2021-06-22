@@ -79,7 +79,7 @@
     display: flex;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    background-color: gray;
+    // background-color: gray;
     font-size: 20px;
     text-align: left;
     font-family: 'Saira Condensed', sans-serif;
@@ -109,6 +109,7 @@
     // color: #D64033;
     font-family: 'Saira Condensed', sans-serif;
     color: whitesmoke;
+    // color: #E6692A;
     font-size: 100px;
     position: relative;
     top: 0px;
@@ -159,7 +160,6 @@
 //     }    
 }
 
-
 .sub-container-2 {
     opacity: 0;
     animation: slide-in-left 1s ease 1.5s forwards;
@@ -170,8 +170,6 @@
 .homepage-section:first-child {
     z-index: 6;
 }
-
-
 
 @keyframes fade-in {
     from {

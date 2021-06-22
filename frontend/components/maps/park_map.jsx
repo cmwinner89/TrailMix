@@ -38,12 +38,7 @@ class ParkMap extends React.Component {
 
     render() {
 
-        // let x = document.createElement('div');
-        // x.className = "marker";
-        // new mapboxgl.Marker(x)
-        //     .setLngLat([latitude, longitude])
-        //     .addTo(map)
-
+       
         return (
             <div>
                 <div className="park-map" ref={this.mapContainer} />

@@ -20,7 +20,7 @@ class ReviewForm extends React.Component {
         e.preventDefault();
 
         this.props.action(this.state);
-
+        
         this.setState({
            post_date: '',
            rating: 1,

@@ -6,7 +6,9 @@ class ReviewIndex extends React.Component {
     constructor(props) {
         super(props)
 
-        
+        this.state = {
+            reviews: this.props.reviews
+        }   
         // console.log("Yo from reviewIndex constructor", this.props);
     }
 
@@ -14,6 +16,12 @@ class ReviewIndex extends React.Component {
         // getTrailId();
         this.props.fetchReviews(this.props.match.params.trailId);
     }
+
+    // componentDidUpdate(prevProps, prevState) {
+    //     if (this.state.reviews !== prevState) {
+    //         this.props.fetchReviews(this.props.match.params.trailId);
+    //     }
+    // }
 
     render() {
         const { reviews } = this.props;

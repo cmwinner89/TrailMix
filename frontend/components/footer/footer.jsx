@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link, withRouter } from "react-router-dom"
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { Link, useHistory, withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faAngellist, faLinkedIn, faGlassMartini} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-
+    const history = useHistory();
+    const git = <FontAwesomeIcon icon={faGithub}/>;
+    const angel = <FontAwesomeIcon icon={faAngellist}/>;
+    const martini = <FontAwesomeIcon icon={faGlassMartini}/>
     return (
         <footer>
             <div className="footer-container">
@@ -13,7 +19,8 @@ const Footer = () => {
                     {/* </div> */}
                 </div>
                 <div className="footer-section">
-
+                   
+                    <a target="_blank" href="https://github.com/cmwinner89">{martini}</a>
                 </div>
             </div>
         </footer>

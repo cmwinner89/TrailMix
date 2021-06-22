@@ -16,6 +16,7 @@ const ReviewsReducer = (state={}, action) => {
             let newState = Object.assign({}, state);
             delete newState[action.reviewId];
             return newState;
+            // return newState.filter(({ id }) => id !== action.reviewId);
         default:
             return state;
     }
