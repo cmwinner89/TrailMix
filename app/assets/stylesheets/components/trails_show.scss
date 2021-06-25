@@ -282,12 +282,16 @@
 
 .difficulty {
     padding-bottom: 10px;
-    font-size: 33px;
+    font-size: 38px;
 }
 
 .rating {
     padding-right: 8px;
-    font-size: 28px;
+    font-size: 33px;
+}
+
+.rating > div {
+    padding-right: 8px;
 }
 
 .trail-name {

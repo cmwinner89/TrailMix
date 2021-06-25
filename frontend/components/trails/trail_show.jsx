@@ -32,7 +32,6 @@ class TrailShow extends React.Component {
        if (this.props.reviews !== prevProps.reviews) {
            this.props.fetchReviews(this.props.match.params.trailId);
        }
-
     }
 
 
@@ -73,7 +72,7 @@ class TrailShow extends React.Component {
                                     <p>{this.props.trail.difficulty}</p>
                                 </div>
                                 <div className="rating">
-                                    <div>rating: </div>
+                                    <div>Rating: </div>
                                     <div className="active-star">
                                         ⚝⚝⚝⚝⚝
                                     </div>
