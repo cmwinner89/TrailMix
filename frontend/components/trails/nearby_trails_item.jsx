@@ -24,7 +24,7 @@ const NearbyTrailsItem = ({ trail, trailId }) => {
             <div onClick={cardClickHandle} className="trail-card-container">
 
                 <div className="trail-card-img">
-                    <img src={trail.backgroundPhotoUrl}/>
+                    <img src={trail.backgroundPhotoUrl} />
                 </div>
                 <div className="trail-card-details">
                     <div className="trail-card-trail-name">
@@ -35,10 +35,12 @@ const NearbyTrailsItem = ({ trail, trailId }) => {
                         {park ? park.park_name : ""}
                     </div>
                     <div className="trail-card-difficulty-rating">
-                        {trail.difficulty}
-                        <p>rating: </p>
-                        <div className="active-star">
-                            ⚝⚝⚝⚝⚝
+                        <p>{trail.difficulty}</p>
+                        <div className="trail-card-rating">
+                            <p>rating: </p>
+                            <div className="active-star">
+                                ⚝⚝⚝⚝⚝
+                            </div>
                         </div>
                     </div>
                     <div className="trail-card-length">

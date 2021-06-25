@@ -23,7 +23,7 @@ park1 = Park.create(park_name: "Shenandoah National Park", summary: "Look for a 
 
 park2 = Park.create(park_name: 'Yellow Stone National Park', summary: "Looking for a great trail in Yellowstone National Park, Wyoming? AllTrails has 253 great hiking trails, trail running trails, mountain biking trails and more, with hand-curated trail maps and driving directions as well as detailed reviews and photos from hikers, campers, and nature lovers like you. Ready for some activity? There are 118 moderate trails in Yellowstone National Park ranging from 0.8 to 49.5 miles and from 0 to 10,255 feet above sea level. Start checking them out and you'll be out on the trail in no time!",
                     description: "Yellowstone National Park is America's first national park. Its landscape is vast spanning three states: Wyoming, Montana and Idaho. The park is home to a variety of wildlife including grizzly bears, wolves, bison, and elk. Yellowstone is most famous for Old Faithful and a collection of the world's most extraordinary geysers and hot springs.", contact: '307-344-7381', acreage: 2219790, park_type: 'national',
-                    backgroundPhotoUrl: "https://www.planetware.com/wpimages/2020/08/wyoming-yellowstone-national-park-attractions-tips-tours-touring-the-park.jpg", lat: 43.4799, lng: -110.7624
+                    backgroundPhotoUrl: "https://www.discoverwalks.com/blog/wp-content/uploads/2020/10/yellowstone-national-park-1589616_1280.jpg", lat: 43.4799, lng: -110.7624
                     )
 
 Trail.destroy_all
@@ -41,7 +41,7 @@ trail2 = Trail.create(trail_name: "White Oak Canyon and Cedar Run Trail Loop", s
 
 trail3 = Trail.create(trail_name: 'Upper Geyser Basin and Old Faithful Observation Point Loop', summary: "Upper Geyser Basin and Old Faithful Observation Point Loop is a 4.9 mile loop with heavy traffic.  It is located in Yellow 
                         Stone National Park, Wyoming.  It has features such as hots springs in is a moderate trail.", description: "Subject to closure due to wildlife activity.", length: 4.9, elevation_gain: 357, latitude: 44.4605, longitude: -90.0000, route_type: "Loop", difficulty: "moderate", park_id: park2.id, 
-                        backgroundPhotoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpAAeQsGB5b-9PwOLrmX20FWhIkQdy1anpCA&usqp=CAU"
+                        backgroundPhotoUrl: "https://www.americansouthwest.net/wyoming/photographs1118/observation2.jpg"
                       )
 
 trail4 = Trail.create(trail_name: "Mathews Arm Overall Run Trail", summary: 'Mathews Arm Overall Run Trail is a 8.9 mile moderately trafficked loop trail located near Rileyville, Virginia that features a waterfall and is rated as difficult. The trail offers a number of activity options and is accessible year-round. 

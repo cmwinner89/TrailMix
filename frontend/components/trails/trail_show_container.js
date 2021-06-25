@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import TrailShow from './trail_show';
 import { fetchTrail } from '../../actions/trail_actions';
 import { fetchPark } from '../../actions/park_actions';
+import { fetchReviews } from '../../actions/review_actions';
 
 const mSTP = (state, ownProps) => {
     
@@ -21,7 +22,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     fetchTrail: trailId => dispatch(fetchTrail(trailId)),
-    fetchPark: parkId => dispatch(fetchPark(parkId))
+    fetchPark: parkId => dispatch(fetchPark(parkId)),
+    fetchReviews: trailId => dispatch(fetchReviews(trailId))
 });
 
 export default connect(mSTP, mDTP)(TrailShow);

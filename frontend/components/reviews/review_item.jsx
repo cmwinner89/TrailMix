@@ -4,19 +4,27 @@ import { faHiking, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { IconName } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../../actions/user_actions';
-import { deleteReview, fetchReviews } from '../../util/reviews_api_util';
+import { deleteReview, fetchReviews} from '../../util/reviews_api_util';
+import { useParams } from 'react-router-dom';
 
 const ReviewItem = (props) => {
     // console.log("Yo from reviewItem", props);
     const { post_date, rating } = props.review;
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(fetchUsers());
-        // dispatch(fetchReviews(props.review.trail_id));
+        // if (!props.review) {
+            
+        // } else {
+        //     dispatch(fetchReview(props.review.trail_id));
+        // }
+        
     }, [props.review])
 
     const owner = useSelector((state) => state.entities.users[props.review.user_id])
     const currentUser = useSelector((state) => state.entities.users[state.session.id])
+    const params = useParams();
     // console.log("YOYOYOYO", props.review.trail_id);
     // console.log(props);
     const stars = [];
@@ -26,11 +34,15 @@ const ReviewItem = (props) => {
     }
 
     const renderDelete = (currentUser && currentUser.id === props.review.user_id ?
-        <form >
-            <div onClick={() => deleteReview(props.review.id)} className="review-delete-container">
+    
+            <div className="review-delete-container" onClick={() => {
+                deleteReview(props.review.id)
+                fetchReviews(params.trailId)
+            }
+             } >
                 <FontAwesomeIcon icon={faTrashAlt} />
             </div>
-        </form>
+       
         : "")
 
     return (

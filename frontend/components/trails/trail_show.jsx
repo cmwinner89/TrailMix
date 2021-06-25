@@ -28,11 +28,12 @@ class TrailShow extends React.Component {
         
     }
 
-    // componentDidUpdate() {
-    //     this.props.fetchTrail(this.props.match.params.trailId)
-    //         .then(() => this.props.fetchPark(this.props.trail.park_id))
+    componentDidUpdate(prevProps) {
+       if (this.props.reviews !== prevProps.reviews) {
+           this.props.fetchReviews(this.props.match.params.trailId);
+       }
 
-    // }
+    }
 
 
     render() {
@@ -94,6 +95,7 @@ class TrailShow extends React.Component {
 
                         </div>
                         <div className="trail-img-container">
+                            {/* <img src="https://www.americansouthwest.net/wyoming/photographs1118/observation2.jpg" /> */}
                             <img src={this.props.trail.backgroundPhotoUrl} />
                         </div>
                     </div>

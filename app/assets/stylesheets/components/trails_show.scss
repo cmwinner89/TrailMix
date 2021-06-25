@@ -43,6 +43,7 @@
 .sub-search-bar-text {
     height: 40px;
     width: 270px;
+    // background-color: white;
     background-color: lightgray;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -268,20 +269,31 @@
 
 .stats-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 275px;
     // background-color: yellow;
     justify-content: space-around;
     font-family: 'Saira Condensed', sans-serif;
     font-size: 25px;
-    color: whitesmoke;
+    color: #E6692A;
     padding: 15px;
+    font-weight: bolder;
+}
+
+.difficulty {
+    padding-bottom: 10px;
+    font-size: 33px;
+}
+
+.rating {
+    padding-right: 8px;
+    font-size: 28px;
 }
 
 .trail-name {
     font-family: 'Saira Condensed', sans-serif;
     font-size: 44px;
-    color: whitesmoke;
+    color: #E6692A;
     font-weight: bold;
     padding-left: 15px;
     // color: #E6692A;
@@ -398,12 +410,20 @@
 
 .trail-card-difficulty-rating {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding-left: 15px;
     width: 59%;
     font-size: 18px;
 
+}
+
+.trail-card-rating {
+    display: flex;
+    flex-direction: row;
+}
+.trail-card-rating > p{
+    padding-right: 5px;
 }
 
 .trail-card-length {
