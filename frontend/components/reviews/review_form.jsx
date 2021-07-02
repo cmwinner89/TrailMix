@@ -20,6 +20,7 @@ class ReviewForm extends React.Component {
         e.preventDefault();
 
         this.props.action(this.state);
+        this.toggleReviewHandler();
         
         this.setState({
            post_date: '',
