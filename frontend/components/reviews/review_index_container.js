@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { fetchReviews } from "../../actions/review_actions";
 import ReviewIndex from './review_index';
 import { withRouter } from 'react-router-dom';
-import { deleteReview } from "../../util/reviews_api_util";
+import { deleteReview } from "../../actions/review_actions";
 
 const mSTP = (state, ownProps) => {
     // console.log("Yo from ReviewIndexContainer", state);

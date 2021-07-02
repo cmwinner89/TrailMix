@@ -42,7 +42,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.find(params[:id])
 
         if @review.destroy
-            render :index
+            render :show
         end
     end
 

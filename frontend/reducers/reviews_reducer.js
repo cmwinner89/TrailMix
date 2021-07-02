@@ -13,10 +13,14 @@ const ReviewsReducer = (state={}, action) => {
         case RECEIVE_REVIEW:
             return {...state, reviews: [...state.reviews, action.review]};
         case REMOVE_REVIEW:
+            // console.log("removing review");
             let newState = {...state}
-            delete newState[action.reviewId];
+            // delete newState[action.reviewId];
+            // return newState;
+            console.log("action payload", action.reviewId);
+            newState.reviews = newState.reviews.filter((review) => review.id !== action.reviewId);
+            console.log("newState", newState.reviews);
             return newState;
-            // return newState.filter(({ id }) => id !== action.reviewId);
         default:
             return state;
     }
