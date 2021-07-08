@@ -37,13 +37,14 @@
     font-family: 'Anton', 'sans-serif';
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     width: 831px;
 }
 
 .links > a {
     font-size: 30px;
     padding-right: 30px;
+    padding-bottom: 30px;
     color: #E6692A;
 }
 
