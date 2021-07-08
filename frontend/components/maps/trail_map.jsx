@@ -45,7 +45,7 @@ class TrailMap extends React.Component {
 
         var el = document.createElement('div');
         el.className = 'marker';
-        el.innerHTML = <FontAwesomeIcon icon={faMapMarker}/>
+        // el.innerHTML = <FontAwesomeIcon icon={faMapMarker}/>
 
 
         new mapboxgl.Marker(el)

@@ -15,11 +15,11 @@
 }
 
 .marker {
-    background: url(waypoint.png);
+    content: url(waypoint.png);
 
     color: #E6692A;
     background-size: cover;
-    width: 30px;
+    width: 50px;
     cursor: pointer;
 }
   

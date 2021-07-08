@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.footer-container{
+    display: flex;
+}
+
 .footer-section {
     width: 100%;
-    height: 63px;
+    height: 119px;
     display: flex;
     background-color: lightgrey;
     // position: relative;
@@ -26,3 +32,18 @@
     // text-decoration: none;
 
 }
+
+.links {
+    font-family: 'Anton', 'sans-serif';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 831px;
+}
+
+.links > a {
+    font-size: 30px;
+    padding-right: 30px;
+    color: #E6692A;
+}
+

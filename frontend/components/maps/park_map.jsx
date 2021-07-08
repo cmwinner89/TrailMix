@@ -14,12 +14,15 @@ class ParkMap extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            // latitude: this.props.latitude,
+            // longitude: this.props.longitude,
+            // zoom: 14.77,
+            // center: [127.60597, 35.67283],
+            // pitch: 43,
+            // style: 'mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y'
             latitude: this.props.latitude,
             longitude: this.props.longitude,
-            zoom: 14.77,
-            center: [127.60597, 35.67283],
-            pitch: 43,
-            style: 'mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y'
+            zoom: 9
         }
         this.mapContainer = React.createRef();
 
@@ -28,13 +31,18 @@ class ParkMap extends React.Component {
     componentDidMount() {
         const { longitude, latitude, zoom, pitch } = this.state;
         this.map = new mapboxgl.Map({
+            // container: this.mapContainer.current,
+            // style: this.state.style,
+            // center: [longitude, latitude],
+            // latitude: latitude,
+            // longitude: longitude,
+            // zoom: zoom,
+            // pitch: this.state.pitch
+
             container: this.mapContainer.current,
-            style: this.state.style,
+            style: 'mapbox://styles/mapbox/streets-v11',
             center: [longitude, latitude],
-            latitude: latitude,
-            longitude: longitude,
-            zoom: zoom,
-            pitch: this.state.pitch
+            zoom: zoom
         })
 
         var el = document.createElement('div');

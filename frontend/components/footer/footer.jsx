@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faGithub, faAngellist, faLinkedIn} from "@fortawesome/free-solid-svg-icons";
 // import { faGithub, faAngellist, faLinkedIn} from "@fortawesome/fontawesome-svg-core";
 
+
 const Footer = () => {
     // library.add(fas, faGithub, faAngelist, faLinkedIn)
     const history = useHistory();
@@ -22,8 +23,11 @@ const Footer = () => {
                     {/* </div> */}
                 </div>
                 <div className="footer-section">
-                    {/* {angel}
-                    <a target="_blank" href="https://github.com/cmwinner89">{git}</a> */}
+                   <div className="links">
+                       <a target="_blank" href="https://github.com/cmwinner89">GitHub</a>
+                       <a target="_blank" href="https://www.linkedin.com/in/collin-winner-791203176/">LinkedIn</a>
+                       <a target="_blank" href="https://angel.co/u/collin-winner">Angel List</a>
+                    </div>
                 </div>
             </div>
         </footer>
