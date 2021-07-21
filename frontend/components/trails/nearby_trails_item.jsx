@@ -39,7 +39,7 @@ const NearbyTrailsItem = ({ trail, trailId }) => {
                         <div className="trail-card-rating">
                             <p>rating: </p>
                             <div className="active-star">
-                                ⚝⚝⚝⚝⚝
+                                ★★★★★
                             </div>
                         </div>
                     </div>

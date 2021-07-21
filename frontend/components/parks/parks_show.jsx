@@ -45,7 +45,7 @@ class ParkShow extends React.Component {
                             <div className="rating-container">
                                 <p>Rating: </p>
                                 <div className="active-star">
-                                    ⚝⚝⚝⚝⚝
+                                    ★★★★★
                                 </div>
                             </div>
                         </div>

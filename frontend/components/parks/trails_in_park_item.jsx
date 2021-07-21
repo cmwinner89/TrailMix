@@ -39,7 +39,7 @@ const TrailsInParkItem = (props) => {
                         <div className="trail-in-park-rating">
                             <p>rating: </p>
                             <div className='active-star'>
-                                ⚝⚝⚝⚝⚝
+                                ★★★★★
                             </div>
                          
                         </div>

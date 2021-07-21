@@ -74,7 +74,7 @@ class TrailShow extends React.Component {
                                 <div className="rating">
                                     <div>Rating: </div>
                                     <div className="active-star">
-                                        ⚝⚝⚝⚝⚝
+                                        ★★★★★
                                     </div>
                                 </div>
                             </div>
