@@ -81,6 +81,7 @@ class TrailShow extends React.Component {
                         </div>
                         <div className="other-action-container">
                             <div className='trail-directions-container'>
+                                <p>Get Directions</p>
                                 <a target="_blank" href={`https://www.google.com/maps/dir/Current+Location/${this.props.trail.latitude},${this.props.trail.longitude}`}>
                                     <FontAwesomeIcon icon={faDirections} />
                                 </a>

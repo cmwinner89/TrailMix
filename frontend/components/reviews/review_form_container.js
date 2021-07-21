@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
     // console.log("Yo from reveiwContainer", ownProps);
     return ({
         review: {
-            post_date: '',
+            post_date: new Date().toString(),
             rating: 1,
             review: '',
             user_id: state.session.id,

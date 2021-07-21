@@ -30,7 +30,7 @@ const ReviewItem = (props) => {
     const stars = [];
 
     for (let i = 1; i <= 5; i++) {
-        rating >= i ? stars.push(<div key={i} className="active-star">⚝</div>) : stars.push(<div key={i} className="">⚝</div>)
+        rating >= i ? stars.push(<div key={i} className="active-star">★</div>) : stars.push(<div key={i} className="">⚝</div>)
     }
 
     const renderDelete = (currentUser && currentUser.id === props.review.user_id ?

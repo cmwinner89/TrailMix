@@ -245,13 +245,17 @@
 }
 
 .trail-directions-container {
-    font-size: 50px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 .trail-directions-container > a {
     text-decoration: none;
     color: white;
-   
+    font-size: 50px;
+    margin-left: 10px;
 }
 
 
@@ -317,7 +321,6 @@
     font-size: 50px;
     color: whitesmoke;
     left: 89px;
-
 }
 
 .nearby-trails-container {
