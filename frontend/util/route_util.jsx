@@ -1,16 +1,17 @@
-import { withRouter, Route, Redirect, useHistory } from 'react-router-dom';
+import { withRouter, Route, Redirect, useHistory, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import React from 'react';
 
 
-const Auth = ({ component: Component, path, loggedIn, exact }) => {
+const Auth = ({ component: Component, path, loggedIn, exact, location }) => {
     const history = useHistory();
+    // console.log("location", location);
     return (
         <Route
             path={path}
             exact={exact}
             render={props =>
-                !loggedIn ? <Component {...props} /> : history.goBack()
+                !loggedIn ? <Component {...props} /> : history.push("/")
             }
         />
     )
