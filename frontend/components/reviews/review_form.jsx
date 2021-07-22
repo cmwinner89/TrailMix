@@ -29,14 +29,7 @@ class ReviewForm extends React.Component {
         });
     }
 
-    updateSelectedStar(idx) {
-        this.setState({
-            ...this.state,
-            starValueSelected: idx,
-            rating: idx
-        });
-
-    }
+    
 
     toggleReviewHandler() {
         this.setState({ ...this.state, toggleReviewContainer: !this.state.toggleReviewContainer })

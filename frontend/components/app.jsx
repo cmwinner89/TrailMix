@@ -8,6 +8,7 @@ import HeaderContainer from './header/header_container';
 import TrailShowContainter from './trails/trail_show_container'
 import Footer from "./footer/footer";
 import ParkShowContainer from './parks/parks_show_container';
+import ReviewEditForm from './reviews/review_edit_form';
 
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
         <AuthRoute path='/login' component={LoginFormContainer} />
         <Route path='/trails/:trailId' component={TrailShowContainter} />
         <Route path='/parks/:parkId' component={ParkShowContainer} />
+        <Route path="/reviews/:reviewId/edit" component={ReviewEditForm} />
 
         <Footer />
     </div>

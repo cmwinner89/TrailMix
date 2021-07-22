@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHiking, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faHiking, faTrashAlt, faEdit } from "@fortawesome/free-solid-svg-icons";
 import { IconName } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../../actions/user_actions';
 import { deleteReview, fetchReviews } from '../../actions/review_actions';
 import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import ReviewEditForm from './review_edit_form';
 
 const ReviewItem = (props) => {
     // console.log("Yo from reviewItem", props);
     const { post_date, rating } = props.review;
     const dispatch = useDispatch();
+    const history = useHistory();
 
     useEffect(() => {
         dispatch(fetchUsers());
@@ -25,25 +28,33 @@ const ReviewItem = (props) => {
     const owner = useSelector((state) => state.entities.users[props.review.user_id])
     const currentUser = useSelector((state) => state.entities.users[state.session.id])
     const params = useParams();
-    // console.log("YOYOYOYO", props.review.trail_id);
-    // console.log(props);
+    const [editReview, setEditReview] = useState(false);
+
     const stars = [];
 
     for (let i = 1; i <= 5; i++) {
-        rating >= i ? stars.push(<div key={i} className="active-star">★</div>) : stars.push(<div key={i} className="">⚝</div>)
+        rating >= i ? stars.push(<div key={i} className="active-star">★</div>) : stars.push(<div key={i} className="">★</div>)
     }
 
     const renderDelete = (currentUser && currentUser.id === props.review.user_id ?
-
-        <div className="review-delete-container" onClick={() => {
-            dispatch(deleteReview(props.review.id))
-            console.log(deleteReview(props.review.id));
-            // fetchReviews(params.trailId)
-        }
-        } >
-            <FontAwesomeIcon icon={faTrashAlt} />
+        <div className="review-delete-edit-container">
+            <div className="review-delete-container" onClick={() => {
+                dispatch(deleteReview(props.review.id))
+                // console.log(deleteReview(props.review.id));
+                // fetchReviews(params.trailId)
+            }
+            } >
+                <FontAwesomeIcon icon={faTrashAlt} />
+            </div>
+            <div className="reveiw-edit-containter"
+                onClick={() => {
+                    setEditReview(!editReview);
+                    history.push(`/reviews/${props.review.id}/edit`)
+                }}>
+                { editReview ? <ReviewEditForm reviewIdx={props.idx} review={props.review} /> : ""}
+                <FontAwesomeIcon icon={faEdit} />
+            </div>
         </div>
-
         : "")
 
     return (

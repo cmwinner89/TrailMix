@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewItem from './review_item';
+import ReviewEditForm from './review_edit_form';
 
 class ReviewIndex extends React.Component {
 
@@ -38,13 +39,13 @@ class ReviewIndex extends React.Component {
             
             <div>
                 {
-                    this.props.reviews.map(review => {
-                        // console.log("Yo From ReviewIndex Map", review)
+                    this.props.reviews.map((review, idx) => {
                         return (
                             <ReviewItem
                                 key={review.id}
                                 review={review}
                                 deleteReview={this.props.deleteReview}
+                                idx={idx}
                                 // user_fname={this.props.currentUser.fname}
                                 // user_lname={this.props.currentUser.lname}
                                 // user_id={this.props.currentUser.id}

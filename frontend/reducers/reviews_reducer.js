@@ -1,6 +1,7 @@
 import { RECEIVE_ALL_REVIEWS, 
         RECEIVE_REVIEW, 
-        REMOVE_REVIEW} from '../actions/review_actions';
+        REMOVE_REVIEW,
+        EDIT_REVIEW} from '../actions/review_actions';
         
 
 const ReviewsReducer = (state={}, action) => {
@@ -12,14 +13,16 @@ const ReviewsReducer = (state={}, action) => {
             return {...state, reviews: action.reviews};
         case RECEIVE_REVIEW:
             return {...state, reviews: [...state.reviews, action.review]};
+        case EDIT_REVIEW:
+            return {...state, updateReview: action.review};
         case REMOVE_REVIEW:
             // console.log("removing review");
             let newState = {...state}
             // delete newState[action.reviewId];
             // return newState;
-            console.log("action payload", action.reviewId);
+            // console.log("action payload", action.reviewId);
             newState.reviews = newState.reviews.filter((review) => review.id !== action.reviewId);
-            console.log("newState", newState.reviews);
+            // console.log("newState", newState.reviews);
             return newState;
         default:
             return state;

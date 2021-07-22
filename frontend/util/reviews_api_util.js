@@ -14,7 +14,7 @@ export const fetchReviews = (trail_id) => {
 };
 
 export const fetchReview = (reviewId) => {
-    return $e.ajax({
+    return $.ajax({
         method: 'GET',
         url: `/api/reviews/${reviewId}`
     })
@@ -29,6 +29,7 @@ export const createReview = (review) => {
 };
 
 export const updateReview = (review) => {
+    console.log("REVIE IN UTIL", review);
     return $.ajax({
         method: 'PATCH',
         url: `/api/reviews/${review.id}`,
