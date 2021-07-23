@@ -44,7 +44,7 @@ const ReviewEditForm = (props) => {
             rating: starValueSelected,
             review: reviewText
         }
-        
+
         dispatch(updateReview(editedReview))
 
         history.push(`/trails/${review.trail_id}`)
@@ -84,7 +84,7 @@ const ReviewEditForm = (props) => {
                     </div>
                     <div className="edit-review-form-text">
                         <textarea
-                            className="edit-review-from-text-area"
+                            className="edit-review-form-text-area"
                             type="text"
                             value={reviewText}
                             onChange={e => setReviewText(e.target.value)}>
@@ -100,6 +100,8 @@ const ReviewEditForm = (props) => {
                     </div>
                 </div>
             </form>
+            <img src="https://images.unsplash.com/photo-1618776574386-1003feb9e86f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80" />
+
         </div>
     ) : "")
 }
