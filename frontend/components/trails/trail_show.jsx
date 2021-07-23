@@ -14,31 +14,35 @@ class TrailShow extends React.Component {
         super(props);
         // debugger
         // console.log("YO FROM TRAILSHOW CONSTRUCTOR");
-        // console.log("Yo from trail show", this.props.trail);
+        // console.log("Yo from trail show", this.props);
         this.state = {
             trailId: this.props.match.params.trailId,
             // park: this.props.entities.parks
         }
+        console.log("STATE", this.state);
 
     }
 
     componentDidMount() {
         this.props.fetchTrail(this.props.match.params.trailId)
-        .then(() => this.props.fetchPark(this.props.trail.park_id))
-        
+            .then(() => this.props.fetchPark(this.props.trail.park_id))
     }
 
     componentDidUpdate(prevProps) {
-       if (this.props.reviews !== prevProps.reviews) {
-           this.props.fetchReviews(this.props.match.params.trailId);
-       }
+
+        if (this.state.trailId !== this.props.match.params.trailId) {
+            this.props.fetchTrail(this.props.match.params.trailId)
+                .then(() => this.props.fetchPark(this.props.trail.park_id))
+        }
+        if (this.props.reviews !== prevProps.reviews) {
+            this.props.fetchReviews(this.props.match.params.trailId);
+        }
+
     }
 
 
     render() {
-        // const {trail_name, summary, description, } = this.props.trail;
-        // console.log("BIG PROPS", this.props)
-        if (!this.props.trail ) {
+        if (!this.props.trail) {
             return null;
         }
         // if(!this.props.park) {
@@ -89,7 +93,7 @@ class TrailShow extends React.Component {
                             <div className="trail-print-container">
                                 {/* <a href={'javascript:window.print()'}>Print</a> */}
                             </div>
-            
+
                         </div>
                         <div className="border">
 

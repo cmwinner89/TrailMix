@@ -6,9 +6,6 @@ import { fetchUsers } from '../../actions/user_actions';
 
 const Header = ({ currentUser, logout, history }) => {
 
-    useEffect(() => {
-        dispatch(fetchUsers());
-    }, [])
     const sessionId = useSelector(state => state.session.id)
     const user = useSelector(state => state.entities.users[sessionId]);
     const dispatch = useDispatch();
@@ -25,7 +22,6 @@ const Header = ({ currentUser, logout, history }) => {
     }, [user])
 
     const [fname, setFname] = useState("");
-    console.log("CURRENT USER", user)
     const isUser = (currentUser ? (
         <div className='big-head-section'>
             <h2>Welcome, {currentUser.fname}</h2>
