@@ -16,7 +16,7 @@
 }
 
 .marker {
-    content: url(waypoint);
+    content: image_url(waypoint);
     // content: url(<%= asset_path 'waypoint.png' %>);
 
     color: #E6692A;
