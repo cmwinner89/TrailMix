@@ -1,5 +1,4 @@
 
-// @import "../images/waypoint.png";
 
 .map-container {
     height: 380px;
@@ -18,6 +17,7 @@
 
 .marker {
     content: url(waypoint);
+    // content: url(<%= asset_path 'waypoint.png' %>);
 
     color: #E6692A;
     background-size: cover;
