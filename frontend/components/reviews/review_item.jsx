@@ -5,7 +5,7 @@ import { IconName } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../../actions/user_actions';
 import { deleteReview, fetchReviews } from '../../actions/review_actions';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import ReviewEditForm from './review_edit_form';
 
