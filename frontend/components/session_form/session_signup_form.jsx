@@ -27,6 +27,7 @@ class SessionSignupForm extends React.Component {
         e.preventDefault();
 
         this.props.action(this.state);
+        // this.props.action(this.state).then(this.props.login(this.state));
         this.setState({
             fname: '',
             lname: '',

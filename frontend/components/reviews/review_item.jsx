@@ -46,14 +46,17 @@ const ReviewItem = (props) => {
             } >
                 <FontAwesomeIcon icon={faTrashAlt} />
             </div>
-            <div className="reveiw-edit-containter"
-                onClick={() => {
-                    setEditReview(!editReview);
-                    history.push(`/reviews/${props.review.id}/edit`)
-                }}>
-                { editReview ? <ReviewEditForm reviewIdx={props.idx} review={props.review} /> : ""}
-                <FontAwesomeIcon icon={faEdit} />
-            </div>
+            <Link to={{pathname: `/reviews/${props.review.id}/edit`,
+                        state: props.review}}>
+                <div className="reveiw-edit-containter"
+                    onClick={() => {
+                        setEditReview(!editReview);
+
+                    }}>
+                    {editReview ? <ReviewEditForm reviewIdx={props.idx} reviewToEdit={props.review} /> : ""}
+                    <FontAwesomeIcon icon={faEdit} />
+                </div>
+            </Link>
         </div>
         : "")
 

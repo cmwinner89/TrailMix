@@ -8,20 +8,26 @@ const Header = ({ currentUser, logout, history }) => {
 
     const sessionId = useSelector(state => state.session.id)
     const user = useSelector(state => state.entities.users[sessionId]);
+    const users = useSelector(state => state.entities.users);
     const dispatch = useDispatch();
 
-    const [isCurrentUser, setCurrentUser] = useState(false);
-    const [currUser, setCurrUser] = useState()
-
     useEffect(() => {
-        if (user) {
-            setCurrentUser(!isCurrentUser)
-            setFname(user.fname)
-            
-        }
-    }, [user])
+        
+        dispatch(fetchUsers())
 
-    const [fname, setFname] = useState("");
+    }, []);
+
+    // const [isCurrentUser, setCurrentUser] = useState(false);
+    // const [currUser, setCurrUser] = useState()
+
+    // useEffect(() => {
+    //     if (user) {
+    //         setCurrentUser(!isCurrentUser)
+    //         setFname(user.fname)
+
+    //     }
+    // }, [user])
+
     const isUser = (currentUser ? (
         <div className='big-head-section'>
             <h2>Welcome, {currentUser.fname}</h2>

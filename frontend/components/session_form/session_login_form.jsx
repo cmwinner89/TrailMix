@@ -49,8 +49,6 @@ class SessionLoginForm extends React.Component {
         return (
             <div className="session-form-container">
                 <div className="login-form-card">
-                    {/* <h2>{formType}</h2> */}
-                    {/* <h1>YO FROM LOGIN FORM</h1> */}
                     <form onSubmit={this.handleSubmit}>
                         <div>
 
