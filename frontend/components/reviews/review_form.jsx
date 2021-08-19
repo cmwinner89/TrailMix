@@ -38,6 +38,11 @@ class ReviewForm extends React.Component {
     updateStarValueHovered(idx) {
         this.setState({ ...this.state, starValueHovered: idx });
     }
+    
+    
+    updateSelectedStar(idx) {
+        this.setState({ ...this.state, starValueSelected: idx});
+    }
 
     update(field) {
         return (

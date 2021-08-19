@@ -19,7 +19,7 @@ class TrailShow extends React.Component {
             trailId: this.props.match.params.trailId,
             // park: this.props.entities.parks
         }
-        console.log("STATE", this.state);
+        // console.log("STATE", this.state);
 
     }
 

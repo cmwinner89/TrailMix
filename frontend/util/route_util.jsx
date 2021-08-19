@@ -5,7 +5,7 @@ import React from 'react';
 
 const Auth = ({ component: Component, path, loggedIn, exact, location }) => {
     const history = useHistory();
-    console.log("location", document.referrer);
+    // console.log("location", document.referrer);
     
     return (
         <Route
