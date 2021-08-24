@@ -23,9 +23,9 @@ class ReviewForm extends React.Component {
         this.toggleReviewHandler();
 
         this.setState({
-            post_date: '',
             rating: 1,
-            review: ''
+            review: '',
+            starValueSelected: 1
         });
     }
 
