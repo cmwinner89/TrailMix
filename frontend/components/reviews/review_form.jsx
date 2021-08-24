@@ -19,10 +19,6 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.setState({
-            rating: this.state.starValueSelected
-        });
-
         this.props.action(this.state);
         this.toggleReviewHandler();
 
